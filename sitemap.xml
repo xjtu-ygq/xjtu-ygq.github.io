@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xjtu-ygq.github.io/posts/</loc>
-    <lastmod>2022-11-07T21:36:34+08:00</lastmod>
+    <loc>https://xjtu-ygq.github.io/posts/new/</loc>
+    <lastmod>2022-11-08T13:02:07+08:00</lastmod>
   </url><url>
-    <loc>https://xjtu-ygq.github.io/posts/update/</loc>
-    <lastmod>2022-11-07T21:36:34+08:00</lastmod>
+    <loc>https://xjtu-ygq.github.io/posts/</loc>
+    <lastmod>2022-11-08T13:02:07+08:00</lastmod>
   </url><url>
     <loc>https://xjtu-ygq.github.io/</loc>
+    <lastmod>2022-11-08T13:02:07+08:00</lastmod>
+  </url><url>
+    <loc>https://xjtu-ygq.github.io/posts/update/</loc>
     <lastmod>2022-11-07T21:36:34+08:00</lastmod>
   </url><url>
     <loc>https://xjtu-ygq.github.io/about/</loc>
