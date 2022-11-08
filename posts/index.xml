@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Yin Guangqi</title>
+    <link>https://xjtu-ygq.github.io/posts/</link>
+    <description>Recent content in Posts on Yin Guangqi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Nov 2022 21:36:34 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update</title>
+      <link>https://xjtu-ygq.github.io/posts/update/</link>
+      <pubDate>Mon, 07 Nov 2022 21:36:34 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/posts/update/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
