@@ -29,6 +29,7 @@ body {
   background-color: #f7f7f7;
   margin: 0;
   padding: 0;
+  counter-reset: h2_counter;
 }
 
 p {
@@ -156,7 +157,7 @@ hr {
   width: 65px;
   letter-spacing: 2px;
   line-height: 1.2;
-  color: #000000;
+  color: #1F1F1F;
 }
 
 .header .site_title_container .site_title a span {
@@ -177,6 +178,7 @@ hr {
   font-weight: normal !important;
   float: none !important;
   text-align: right;
+  letter-spacing: 1px;
 }
 
 .header .my_socials {
@@ -218,7 +220,7 @@ hr {
 .post .post_title a {
   text-decoration: none;
   letter-spacing: 1px;
-  color: #1f1f1f;
+  color: #1F1F1F;
   font-size: 1.5rem;
   line-height: 28px;
 }
@@ -247,19 +249,19 @@ hr {
 }
 
 .post .post_content p {
-  line-height: 2em;
+  line-height: 1.6;
   letter-spacing: 0.2px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .post .post_content a {
+  color: #08c;
   text-decoration: none;
-  letter-spacing: 1px;
-  color: #e42b2b;
 }
 
 .post .post_content a:hover {
-  color: #8e0000;
+  color: #00a3f5;
+  text-decoration: none;
 }
 
 .post .post_footer {
@@ -321,7 +323,8 @@ hr {
   padding: 0;
 }
 
-.doc_comments {
+/* 暂时取消注释模块 */
+/* .doc_comments {
   font-size: 14px;
   color: #383838;
   margin-top: 30px;
@@ -330,7 +333,7 @@ hr {
 
 .doc_comments .comments_block_title {
   color: #000000;
-}
+} */
 
 .footer {
   clear: both;
@@ -442,17 +445,27 @@ hr {
 }
 
 .markdown {
-  line-height: 1.8em;
+  line-height: 1.6;
   word-wrap: break-word;
   word-break: normal;
   overflow-wrap: break-word;
 }
 
+html body li>p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 .markdown ul,
 .markdown ol,
 .markdown dl {
-  margin: 0.8em 0;
+  padding-left: 2em;
 }
+
+.markdown h2 { counter-reset: h3_counter; }
+.markdown h3 { counter-reset: h4_counter; }
+.markdown h4 { counter-reset: h5_counter; }
+.markdown h5 { counter-reset: h6_counter; }
 
 .markdown h1,
 .markdown h2,
@@ -460,30 +473,65 @@ hr {
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  margin: 20px 0 20px 0;
-  color: #000000;
+  margin: 1em 0 16px 0;
+  color: #1F1F1F;
+  font-weight: 600
 }
 
 .markdown h1 {
-  font-size: 1.35em;
+  font-size: 1.5em;
 }
 
 .markdown h2 {
-  font-size: 1.25em;
+  font-size: 1.4em;
 }
 
 .markdown h3 {
-  font-size: 1.15em;
+  font-size: 1.3em;
 }
 
 .markdown h4 {
+  font-size: 1.2em;
+}
+
+.markdown h5 {
   font-size: 1.1em;
+}
+
+.markdown h6 {
+  font-size: 1em;
+}
+
+.markdown h2:before {
+  counter-increment: h2_counter;
+  content: counter(h2_counter) "\0000a0\0000a0";
+}
+
+.markdown h3:before {
+  counter-increment: h3_counter;
+  content: counter(h2_counter) "." counter(h3_counter) "\0000a0\0000a0";
+}
+
+.markdown h4:before {
+  counter-increment: h4_counter;
+  content: counter(h2_counter) "." counter(h3_counter) "." counter(h4_counter) "\0000a0\0000a0";
+}
+
+.markdown h5:before {
+  counter-increment: h5_counter;
+  content: counter(h2_counter) "." counter(h3_counter) "." counter(h4_counter) "." counter(h5_counter) "\0000a0\0000a0";
+}
+
+.markdown h6:before {
+  counter-increment: h6_counter;
+  content: counter(h2_counter) "." counter(h3_counter) "." counter(h4_counter) "." counter(h5_counter) "." counter(h6_counter) "\0000a0\0000a0";
 }
 
 .markdown pre,
 .markdown code {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.9em;
+  font-size: 15px;
+  line-height: 1.4;
   background: #f8fafc;
   border: none;
   white-space: pre;
@@ -540,34 +588,24 @@ hr {
 }
 
 .markdown blockquote {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 2.5em 0;
-  padding: 0 0 0 50px;
-  font-style: italic;
-  color: #555555;
-  border-left: none;
+  margin: 16px 0;
+  font-size: inherit;
+  padding: 0 15px;
+  color: #5c5c5c;
+  background-color: #f8fafc;
+  border-left: 4px solid #d6d6d6
 }
 
-.markdown blockquote:before {
-  content: '“';
-  display: block;
-  font-family: times, sans-serif;
-  font-style: normal;
-  font-size: 48px;
-  color: #444444;
-  font-weight: bold;
-  line-height: 30px;
-  margin-left: -50px;
-  position: absolute;
+.markdown blockquote>:first-child {
+  margin-top: 0
 }
 
-.markdown strong,
-.markdown b,
-.markdown em {
-  padding: 1px 2px;
-  background-color: #fcfcf0;
-  font-weight: normal;
+.markdown blockquote>:last-child {
+  margin-bottom: 0
+}
+
+.markdown strong {
+  color: #000;
 }
 
 .markdown .fancybox {
@@ -623,6 +661,15 @@ a.back_to_top:hover {
 
 a.back_to_top:hover span {
   color: #555555;
+}
+
+html body kbd {
+  color: #000;
+  border: 1px solid #d6d6d6;
+  border-bottom: 2px solid #c7c7c7;
+  padding: 2px 4px;
+  background-color: #f0f0f0;
+  border-radius: 3px
 }
 
 @media print, screen and (max-width: 680px) {
@@ -693,7 +740,7 @@ a.back_to_top:hover span {
     margin-top: 40px;
   }
   .post .post_title a {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   .post_footer {
     padding-bottom: 30px;

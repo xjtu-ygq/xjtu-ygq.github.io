@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Yin Guangqi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Nov 2022 21:36:34 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Nov 2022 13:10:43 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://xjtu-ygq.github.io/posts/test/</link>
+      <pubDate>Wed, 09 Nov 2022 13:10:43 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/posts/test/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Update</title>
       <link>https://xjtu-ygq.github.io/posts/update/</link>
