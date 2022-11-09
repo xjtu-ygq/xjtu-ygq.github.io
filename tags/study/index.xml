@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on Yin Guangqi</title>
-    <link>https://xjtu-ygq.github.io/tags/blog/</link>
-    <description>Recent content in blog on Yin Guangqi</description>
+    <title>study on Yin Guangqi</title>
+    <link>https://xjtu-ygq.github.io/tags/study/</link>
+    <description>Recent content in study on Yin Guangqi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Nov 2022 13:10:43 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Nov 2022 13:10:43 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/tags/study/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test</title>
       <link>https://xjtu-ygq.github.io/posts/test/</link>
