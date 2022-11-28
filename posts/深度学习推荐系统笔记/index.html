@@ -18,7 +18,7 @@
 
     
     
-    <meta name="keywords" content="推荐系统, 推荐算法" />
+    <meta name="keywords" content="推荐系统, 推荐算法, 深度学习" />
     
 
 	
@@ -181,7 +181,7 @@ M=U\Sigma V^T
 $$</p>
 <ul>
 <li>奇异值分解要求共现矩阵是稠密的</li>
-<li>计算复杂度较高O(mn^2)</li>
+<li>计算复杂度较高 $O(mn^2)$</li>
 </ul>
 </li>
 <li>
@@ -211,6 +211,48 @@ $$</p>
 </li>
 </ol>
 <h3 id="逻辑回归lr">逻辑回归LR</h3>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%95%B0%E5%AD%A6%E5%BD%A2%E5%BC%8F%E7%9A%84%E6%8E%A8%E6%96%AD%E8%BF%87%E7%A8%8B.jpg" alt="逻辑回归模型的数学形式的推断过程"></p>
+<ol>
+<li>优点：
+<ul>
+<li>数学含义上的支撑</li>
+<li>可解释性强</li>
+<li>工程化需要</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>表达能力不强（单一特征简单加权）</li>
+<li>无法进行特征交叉、特征筛选</li>
+</ul>
+</li>
+</ol>
+<h3 id="自动特征交叉fm-ffm">自动特征交叉FM-FFM</h3>
+<ol>
+<li>
+<p>POLY2模型：手动特征组合，本质还是LR
+$$
+\phi POLY2(w,x)=\lim_{j_1=1 \to n-1} \lim_{j2=j1+1 \to n} w_{h_(j_1,j_2)}x_{j_1}x_{j_2}
+$$</p>
+<ul>
+<li>无选择的特征交叉，造成特征向量稀疏</li>
+<li>复杂度 $n-n^2$</li>
+</ul>
+</li>
+<li>
+<p>FM模型：引入特征隐向量，与矩阵分解用隐向量做法异曲同工
+$$
+\phi FM(w,x)=\lim_{j_1=1 \to n} \lim_{j2=j1+1 \to n} (w_{j_1}\cdot w_{j_2})x_{j_1}x_{j_2}
+$$</p>
+<ul>
+<li>更好的解决了数据稀疏问题</li>
+<li>虽然丢失了某些精确记忆能力，但是泛化能力大大提升</li>
+</ul>
+</li>
+<li>
+<p>FFM模型：引入特征域概念</p>
+</li>
+</ol>
 <h2 id="深度学习推荐模型">深度学习推荐模型</h2>
 </div>
                     <div class="post_footer">
@@ -223,6 +265,8 @@ $$</p>
                                     <a href="https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">推荐系统</a>
                                     
                                     <a href="https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/">推荐算法</a>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
                                     
                                 </span>
                             </div>
