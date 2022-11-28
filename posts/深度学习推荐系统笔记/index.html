@@ -9,21 +9,19 @@
 	
 	
 	
-	<title>Posts ｜ Yin Guangqi</title>
+	<title>《深度学习推荐系统》笔记 ｜ Yin Guangqi</title>
 	
     
     
-    <meta name="description" content="Hugo theme zozo example site." />
+    <meta name="description" content="深度学习推荐系统 传统推荐模型 协同过滤CF 协同过滤的核心是向量的相似度Similarity 余弦相似度 皮尔逊相关系数 用户平均分 物品平均分 UserCF 用户的评分向量（横向量）的相似度，计算相似用户TopN，目标评分=" />
     
 
     
     
-    <meta name="keywords" content="Hugo, theme, zozo" />
+    <meta name="keywords" content="推荐系统, 推荐算法" />
     
 
 	
-	<link rel="alternate" type="application/rss+xml" href="https://xjtu-ygq.github.io/posts/index.xml" title="Yin Guangqi" />
-    
     
     <link rel="shortcut icon" href="https://xjtu-ygq.github.io/images/favicon.ico" />
 
@@ -105,46 +103,85 @@
     </div>
 </div>
         <div class="content">
-            <div class="list_with_title">
-                
-                <div class="listing_title">2022</div>
-                <div class="listing">
-                    
-                    <div class="listing_item">
-                        <div class="listing_post">
-                            <a href="/posts/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/">《深度学习推荐系统》笔记</a>
-                            <div class="post_time"><span class="date">11-28</span></div>
-                        </div>
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/posts/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/'>《深度学习推荐系统》笔记</a></h2>
+                        <span class="date">2022.11.28</span>
                     </div>
-                    
-                    <div class="listing_item">
-                        <div class="listing_post">
-                            <a href="/posts/czq/">某人的合照</a>
-                            <div class="post_time"><span class="date">11-10</span></div>
+                    <div class="post_content markdown"><h1 id="深度学习推荐系统">深度学习推荐系统</h1>
+<h2 id="传统推荐模型">传统推荐模型</h2>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/20200918212315590.png" alt="传统推荐模型的关系演化图"></p>
+<h3 id="协同过滤cf">协同过滤CF</h3>
+<ol>
+<li>协同过滤的核心是向量的相似度Similarity
+<ul>
+<li>余弦相似度</li>
+<li>皮尔逊相关系数
+<ul>
+<li>用户平均分</li>
+<li>物品平均分</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>UserCF
+<ul>
+<li>用户的评分向量（横向量）的相似度，计算相似用户TopN，目标评分=相似度权重x物品评分</li>
+<li>注意，上处的意思是，先获取相似用户，然后由相似用户的评分推出目标物品的评分</li>
+<li>缺点
+<ul>
+<li>用户数&raquo;物品数，严重的计算耗时</li>
+<li>用户的购买数往往是稀疏的，即稀疏（向量）矩阵</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ItemCF
+<ul>
+<li>获取共现矩阵mxn</li>
+<li>计算列向量相似度，得到相似度矩阵nxn</li>
+<li>获取用户历史数据中的正反馈物品</li>
+<li>根据历史物品，计算出TopN物品（如果一个物品与多个历史物品相似，则相加）</li>
+<li>相似度排序，得出最终推荐列表</li>
+</ul>
+</li>
+<li>缺点
+<ul>
+<li>不具有泛化性，A与B的共现推导出相似度，但不能计算C与D，即C与D的相似只能由共现性得出</li>
+<li>具有头部效应，头部热门商品与多个商品共现，这被优先推荐</li>
+<li>稀疏向量（矩阵）</li>
+</ul>
+</li>
+</ol>
+<h3 id="矩阵分解mf">矩阵分解MF</h3>
+<h2 id="深度学习推荐模型">深度学习推荐模型</h2>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">推荐系统</a>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/">推荐算法</a>
+                                    
+                                </span>
+                            </div>
                         </div>
+                        
                     </div>
-                    
-                    <div class="listing_item">
-                        <div class="listing_post">
-                            <a href="/posts/test/">Test</a>
-                            <div class="post_time"><span class="date">11-09</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="listing_item">
-                        <div class="listing_post">
-                            <a href="/posts/update/">Update</a>
-                            <div class="post_time"><span class="date">11-07</span></div>
-                        </div>
-                    </div>
-                    
                 </div>
                 
+                
+                <div class="doc_comments"></div>
+                
             </div>
-            <div class="pagination"></div>
         </div>
-        <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
     <footer class="footer">
     <div class="powered_by">
         <a href="http://github.com/xjtu-ygq">© xjtu-ygq | </a>
