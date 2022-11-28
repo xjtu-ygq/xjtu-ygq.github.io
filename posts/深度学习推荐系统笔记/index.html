@@ -139,8 +139,8 @@
 </li>
 <li>ItemCF
 <ul>
-<li>获取共现矩阵mxn</li>
-<li>计算列向量相似度，得到相似度矩阵nxn</li>
+<li>获取共现矩阵<strong>mxn</strong></li>
+<li>计算列向量相似度，得到相似度矩阵<strong>nxn</strong></li>
 <li>获取用户历史数据中的正反馈物品</li>
 <li>根据历史物品，计算出TopN物品（如果一个物品与多个历史物品相似，则相加）</li>
 <li>相似度排序，得出最终推荐列表</li>
@@ -150,11 +150,43 @@
 <ul>
 <li>不具有泛化性，A与B的共现推导出相似度，但不能计算C与D，即C与D的相似只能由共现性得出</li>
 <li>具有头部效应，头部热门商品与多个商品共现，这被优先推荐</li>
-<li>稀疏向量（矩阵）</li>
+<li>稀疏向量（矩阵）=&gt;MF</li>
+<li>无法加入用户特征、物品特征和上下文特征=&gt;LR</li>
 </ul>
 </li>
 </ol>
 <h3 id="矩阵分解mf">矩阵分解MF</h3>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3%E8%BF%87%E7%A8%8B.jpg" alt="矩阵分解过程"></p>
+<ol>
+<li>
+<p><strong>mxn</strong>的共现矩阵分解为<strong>mxk</strong>用户隐向量和<strong>kxn</strong>物品隐向量</p>
+<ul>
+<li>k决定了隐向量的表达能力强弱</li>
+<li>k越小，包含信息越少，表达能力越弱，泛化能力越高</li>
+</ul>
+</li>
+<li>
+<p>目标函数： $ \widehat r_{ui}=q_i^Tp_u $</p>
+</li>
+<li>
+<p>矩阵分解主要方法</p>
+<ul>
+<li>
+<p>特征值分解：只能用于方阵</p>
+</li>
+<li>
+<p>奇异值分解：
+$$
+M=U\Sigma V^T
+$$</p>
+<ul>
+<li>奇异值分解要求共现矩阵是稠密的</li>
+<li>计算复杂度较高O(mn^2)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 <h2 id="深度学习推荐模型">深度学习推荐模型</h2>
 </div>
                     <div class="post_footer">
