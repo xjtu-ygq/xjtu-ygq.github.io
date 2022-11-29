@@ -6,13 +6,49 @@
     <description>Recent content in Tags on Yin Guangqi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Nov 2022 16:19:03 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Nov 2022 14:56:03 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BST</title>
+      <link>https://xjtu-ygq.github.io/tags/bst/</link>
+      <pubDate>Tue, 29 Nov 2022 14:56:03 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/tags/bst/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DIEN</title>
+      <link>https://xjtu-ygq.github.io/tags/dien/</link>
+      <pubDate>Tue, 29 Nov 2022 14:56:03 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/tags/dien/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DIN</title>
+      <link>https://xjtu-ygq.github.io/tags/din/</link>
+      <pubDate>Tue, 29 Nov 2022 14:56:03 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/tags/din/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>推荐算法</title>
       <link>https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Mon, 28 Nov 2022 16:19:03 +0800</pubDate>
+      <pubDate>Tue, 29 Nov 2022 14:56:03 +0800</pubDate>
       
       <guid>https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>深度学习</title>
+      <link>https://xjtu-ygq.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Tue, 29 Nov 2022 14:56:03 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
     </item>
     
@@ -22,15 +58,6 @@
       <pubDate>Mon, 28 Nov 2022 16:19:03 +0800</pubDate>
       
       <guid>https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>深度学习</title>
-      <link>https://xjtu-ygq.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Mon, 28 Nov 2022 16:19:03 +0800</pubDate>
-      
-      <guid>https://xjtu-ygq.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
     </item>
     
