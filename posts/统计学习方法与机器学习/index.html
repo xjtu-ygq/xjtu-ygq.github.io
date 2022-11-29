@@ -13,7 +13,7 @@
 	
     
     
-    <meta name="description" content="性能度量 混淆矩阵 真实情况 预测结果 正例 反例 正例 TP（真正例） FN（假反例） 反例 FP（假正例） TN（真反例）" />
+    <meta name="description" content="性能度量 混淆矩阵 真实情况 预测结果 正例 反例 正例 TP（真正例） FN（假反例） 反例 FP（假正例） TN（真反例） 偏差与方差 偏差：期望输出与真实标记的差别 $$ bias^2=(\bar f(x)-y)^2 $$ 方差：由样本数相同的不同训练集产生 $$ var(x)=E_D[(f(x;D)-\bar f(x))^2] $$ 噪声 $$" />
     
 
     
@@ -138,7 +138,42 @@
 </tbody>
 </table>
 </li>
+<li>
+<p>偏差与方差</p>
+<ul>
+<li>
+<p>偏差：期望输出与真实标记的差别
+$$
+bias^2=(\bar f(x)-y)^2
+$$</p>
+</li>
+<li>
+<p>方差：由样本数相同的不同训练集产生
+$$
+var(x)=E_D[(f(x;D)-\bar f(x))^2]
+$$</p>
+</li>
+<li>
+<p>噪声
+$$
+\epsilon^2=E_D[(y_D-y)^2]
+$$</p>
+</li>
+<li>
+<p>泛化误差
+$$
+E(f;D)=bias^2(x)+var(x)+\epsilon^2
+$$</p>
+</li>
+</ul>
+</li>
 </ol>
+<h2 id="线性判别分析lda">线性判别分析LDA</h2>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/v2-e7e2482730034721a2b391b408613d6e_r.jpg" alt="查看源图像"></p>
+<ul>
+<li>类内间距小（协方差小）</li>
+<li>类间距离大</li>
+</ul>
 </div>
                     <div class="post_footer">
                         
