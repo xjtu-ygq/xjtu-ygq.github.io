@@ -13,7 +13,7 @@
       <pubDate>Tue, 29 Nov 2022 14:56:03 +0800</pubDate>
       
       <guid>https://xjtu-ygq.github.io/posts/alibaba%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B/</guid>
-      <description>Alibaba推荐算法模型 DIN模型 特点： 挖掘用户历史行为（兴趣分布） Attention机制实现Local Activation Dice激活函数、自适应正则化防止过拟合（数据稀疏） Attention 输入：用户历史行为的物品Embeddi</description>
+      <description>Alibaba推荐算法模型 DIN、DIEN、BST模型 DIN模型 特点： 挖掘用户历史行为（兴趣分布） Attention机制实现Local Activation Dice激活函数、自适应正则化防止过拟合（数据稀疏） Attention 输入：用户</description>
     </item>
     
   </channel>
