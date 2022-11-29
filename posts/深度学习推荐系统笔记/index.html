@@ -232,7 +232,7 @@ $$</p>
 <li>
 <p>POLY2模型：手动特征组合，本质还是LR
 $$
-\phi POLY2(w,x)=\lim_{j_1=1 \to n-1} \lim_{j2=j1+1 \to n} w_{h_(j_1,j_2)}x_{j_1}x_{j_2}
+\phi POLY2(w,x)=\lim_{j_1=1 \to n-1} \lim_{j_2=j_1+1 \to n} w_{h_(j_1,j_2)}x_{j_1}x_{j_2}
 $$</p>
 <ul>
 <li>无选择的特征交叉，造成特征向量稀疏</li>
@@ -242,7 +242,7 @@ $$</p>
 <li>
 <p>FM模型：引入特征隐向量，与矩阵分解用隐向量做法异曲同工
 $$
-\phi FM(w,x)=\lim_{j_1=1 \to n} \lim_{j2=j1+1 \to n} (w_{j_1}\cdot w_{j_2})x_{j_1}x_{j_2}
+\phi FM(w,x)=\lim_{j_1=1 \to n} \lim_{j_2=j_1+1 \to n} (w_{j_1}\cdot w_{j_2})x_{j_1}x_{j_2}
 $$</p>
 <ul>
 <li>更好的解决了数据稀疏问题</li>
@@ -250,10 +250,26 @@ $$</p>
 </ul>
 </li>
 <li>
-<p>FFM模型：引入特征域概念</p>
+<p>FFM模型：引入特征域概念
+$$
+\phi FFM(w,x)=\lim_{j_1=1 \to n} \lim_{j_2=j_1+1 \to n} (w_{j_1,f_2}\cdot w_{j_2,f_1})x_{j_1}x_{j_2}
+$$</p>
+<ul>
+<li>引入特征域，表达能力更强</li>
+<li>计算复杂度提升到 $kn^2$</li>
+</ul>
 </li>
 </ol>
+<h3 id="gbdtlr">GBDT+LR</h3>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/v2-b2daf42d923cd943c453fa11e3c9555d_1440w.jpg" alt="GBDT+LR"></p>
+<ol>
+<li>GBDT构建特征工程，LR用于CTR预估，二者独立训练</li>
+<li>决策树的深度决定了特征交叉的阶数，高于FFM的二阶交叉</li>
+<li>无法并行训练</li>
+</ol>
 <h2 id="深度学习推荐模型">深度学习推荐模型</h2>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/dc92fa1500cbacb94a56855b422f6fb0.png" alt="主流深度学习推荐模型的演化图谱"></p>
+<h3 id="autorec单隐层神经网络">AutoRec单隐层神经网络</h3>
 </div>
                     <div class="post_footer">
                         
