@@ -9,11 +9,11 @@
 	
 	
 	
-	<title>DIN、DIEN、BST模型 ｜ Yin Guangqi</title>
+	<title>Alibaba推荐算法模型 ｜ Yin Guangqi</title>
 	
     
     
-    <meta name="description" content="test" />
+    <meta name="description" content="Alibaba推荐算法模型 DIN模型 特点： 挖掘用户历史行为（兴趣分布） Attention机制实现Local Activation Dice激活函数、自适应正则化防止过拟合（数据稀疏） Attention 输入：用户历史行为的物品Embeddi" />
     
 
     
@@ -106,10 +106,50 @@
             <div class="post_page">
                 <div class="post animate__animated animate__fadeInDown">
                     <div class="post_title post_detail_title">
-                        <h2><a href='/posts/dindienbst%E6%A8%A1%E5%9E%8B/'>DIN、DIEN、BST模型</a></h2>
+                        <h2><a href='/posts/alibaba%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B/'>Alibaba推荐算法模型</a></h2>
                         <span class="date">2022.11.29</span>
                     </div>
-                    <div class="post_content markdown"><p>test</p>
+                    <div class="post_content markdown"><h1 id="alibaba推荐算法模型">Alibaba推荐算法模型</h1>
+<h2 id="din模型">DIN模型</h2>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/20210328023559.png" alt="查看源图像"></p>
+<ol>
+<li>
+<p>特点：</p>
+<ul>
+<li>挖掘用户历史行为（兴趣分布）</li>
+<li>Attention机制实现Local Activation</li>
+<li>Dice激活函数、自适应正则化防止过拟合（数据稀疏）</li>
+</ul>
+</li>
+<li>
+<p>Attention</p>
+<ul>
+<li>输入：用户历史行为的物品Embedding、目标物品的Embedding</li>
+<li>输出：Activation Weight（相当于目标物品与历史物品的权重）</li>
+</ul>
+</li>
+<li>
+<p>自适应正则化mini-batch aware regularization
+$$
+L_2(W)\approx \sum_{j=1}\limits^K\sum_{m=1}\limits^B\frac{\alpha_{mj}}{n_j}||w_j||^2
+$$</p>
+<ul>
+<li>$\alpha_{mj}$表示特征j是否出现在mini-batch样本B中，$n_j$表示样本$j$在$B$中的出现次数，$w_j$则是第$j$个嵌入向量。核心思想：出现频率越大，正则化强度越小</li>
+<li>数据是稀疏的，训练时非常耗时且易过拟合</li>
+<li>只对mini-batch中出现的参数进行计算</li>
+</ul>
+</li>
+<li>
+<p>Dice激活函数</p>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/20200925144736675.png" alt="img">
+$$
+p(s)=\frac{1}{1+e^{-\frac{s-E[s]}{\sqrt{Var[s]+\epsilon}}}}
+$$</p>
+<ul>
+<li>自适应调整rectified point的位置</li>
+</ul>
+</li>
+</ol>
 </div>
                     <div class="post_footer">
                         
