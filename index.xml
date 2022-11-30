@@ -52,32 +52,5 @@
       <description>深度学习推荐系统 传统推荐模型 协同过滤CF 协同过滤的核心是向量的相似度Similarity 余弦相似度 皮尔逊相关系数 用户平均分 物品平均分 UserCF 用户的评分向量（横向量）的相似度，计算相似用户TopN，目标评分=</description>
     </item>
     
-    <item>
-      <title>某人的合照</title>
-      <link>https://xjtu-ygq.github.io/posts/czq/</link>
-      <pubDate>Thu, 10 Nov 2022 18:19:05 +0800</pubDate>
-      
-      <guid>https://xjtu-ygq.github.io/posts/czq/</guid>
-      <description>这是第一张： 这是第二张：</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://xjtu-ygq.github.io/posts/test/</link>
-      <pubDate>Wed, 09 Nov 2022 13:10:43 +0800</pubDate>
-      
-      <guid>https://xjtu-ygq.github.io/posts/test/</guid>
-      <description>行百里者半九十</description>
-    </item>
-    
-    <item>
-      <title>Update</title>
-      <link>https://xjtu-ygq.github.io/posts/update/</link>
-      <pubDate>Mon, 07 Nov 2022 21:36:34 +0800</pubDate>
-      
-      <guid>https://xjtu-ygq.github.io/posts/update/</guid>
-      <description>为天地立心，为生民立命，为往圣继绝学，为万世开太平</description>
-    </item>
-    
   </channel>
 </rss>
