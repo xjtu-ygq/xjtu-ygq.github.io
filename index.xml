@@ -6,7 +6,25 @@
     <description>Recent content on Yin Guangqi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Nov 2022 19:39:00 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Nov 2022 19:26:04 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://xjtu-ygq.github.io/about/</link>
+      <pubDate>Wed, 30 Nov 2022 19:26:04 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/about/</guid>
+      <description>行百里者半九十 为天地立心，为生民立命，为往圣继绝学，为万世开太平 联系方式： Github Email WeChat</description>
+    </item>
+    
+    <item>
+      <title>支持向量机</title>
+      <link>https://xjtu-ygq.github.io/posts/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/</link>
+      <pubDate>Wed, 30 Nov 2022 16:52:31 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/posts/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/</guid>
+      <description>线性可分支持向量机 线性不可分支持向量机 非线性支持向量机</description>
+    </item>
+    
     <item>
       <title>《统计学习方法》与《机器学习》</title>
       <link>https://xjtu-ygq.github.io/posts/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
@@ -41,15 +59,6 @@
       
       <guid>https://xjtu-ygq.github.io/posts/czq/</guid>
       <description>这是第一张： 这是第二张：</description>
-    </item>
-    
-    <item>
-      <title>LeetCode</title>
-      <link>https://xjtu-ygq.github.io/about/</link>
-      <pubDate>Wed, 09 Nov 2022 13:53:17 +0800</pubDate>
-      
-      <guid>https://xjtu-ygq.github.io/about/</guid>
-      <description>LeetCode 基础数据结构 二分搜索速记卡 704.二分查找 public int search(int[] nums, int target) { int left=0,right=nums.length-1; while(left&amp;lt;=right){ int mid=left+(right-left)/2; if(nums[mid]&amp;gt;target) right=mid-1; else if(nums[mid]&amp;lt;target) left=mid+1; else { return mid; } } return -1; } 34.在排序数组中查找元素的第一个和最后一个位置 public int leftfun(int[] nums, int target){ int left=0,right=nums.length-1; while (left&amp;lt;=right){ int mid=left+(right-left)/2; if(nums[mid]&amp;gt;=target) right=mid-1; else if(nums[mid]&amp;lt;target) left=mid+1; } if(left&amp;gt;=nums.length||nums[left]!=target) return -1; return left; } public int rightfun(int[] nums,</description>
     </item>
     
     <item>
