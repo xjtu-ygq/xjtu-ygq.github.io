@@ -13,7 +13,7 @@
 	
     
     
-    <meta name="description" content="线性可分支持向量机 线性不可分支持向量机 非线性支持向量机" />
+    <meta name="description" content="线性可分支持向量机 线性分类器$g(x)=w^Tx&#43;w_0$存在分类面$g(x)=0$满足： 分类面与两类样本间距离相等 分类面与两类样本间距离最大 支持向量（狭义）：距离分类面最近的那几个点 线性鉴别函数与分" />
     
 
     
@@ -110,8 +110,73 @@
                         <span class="date">2022.11.30</span>
                     </div>
                     <div class="post_content markdown"><h2 id="线性可分支持向量机">线性可分支持向量机</h2>
+<ol>
+<li>
+<p>线性分类器$g(x)=w^Tx+w_0$存在分类面$g(x)=0$满足：</p>
+<ul>
+<li>分类面与两类样本间距离相等</li>
+<li>分类面与两类样本间距离最大</li>
+</ul>
+</li>
+<li>
+<p>支持向量（狭义）：距离分类面最近的那几个点<img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/a137c0d4330dde5440d5fbf93ed073517e8d0b81" alt="img"></p>
+</li>
+<li>
+<p>线性鉴别函数与分类面</p>
+<ul>
+<li>不是一一对应的关系</li>
+<li>分类面有无穷多个鉴别函数与之对应
+<ul>
+<li>$g(x)=w^Tx+w_0$与$g(x)=w^Tx+w_0=0$</li>
+<li>$g_a(x)=a\cdot w^Tx+a\cdot w_0$与$g_a(x)=a\cdot w^Tx+a\cdot w_0=0$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>存在鉴别函数$|g(x_0)|=1$​，其中$x_0$​表示支持向量，满足
+$$
+z=\frac{|g(x_0)|}{||w||}=\frac{|w^Tx_0+w_0|}{||w||}=\frac{1}{||w||}
+$$</p>
+</li>
+<li>
+<p>两类样本间的间隔：$\frac{1}{||w||}+\frac{1}{||w||}=\frac{2}{||w||}$</p>
+</li>
+<li>
+<p>优化问题：$J(w)=\frac{1}{2}||w||^2$=&gt;$y_i(w^Tx_i+w_0)\ge 1$</p>
+</li>
+<li>
+<p>约束条件拉格朗日函数
+$$
+L(w,w_0,\lambda)=\frac{1}{2}w^Tw-\sum_{i=1}^N\lambda _i{y_i(w^Tx_i+w_0)-1}
+$$</p>
+</li>
+<li>
+<p>求解对偶问题（构造三元组，满足KKT条件）</p>
+</li>
+</ol>
 <h2 id="线性不可分支持向量机">线性不可分支持向量机</h2>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/cbbc2a43e09580b170052a230b9e01712b7232cc" alt="img"></p>
+<ol>
+<li>存在个别点，跨过了分类面，需要引入松弛因子$\zeta$</li>
+<li>$(w,w_0)$满足条件：
+<ul>
+<li>$w^Tx_i+w_0\ge +1-\zeta$，$x_i\in w_1$</li>
+<li>$w^Tx_i+w_0\ge -1+\zeta$，$x_i\in w_2$</li>
+</ul>
+</li>
+<li>求解对偶问题</li>
+</ol>
 <h2 id="非线性支持向量机">非线性支持向量机</h2>
+<ol>
+<li>数据需要根据核函数进行转换</li>
+<li>常用核函数
+<ul>
+<li>多项式核：$k(x,z)=(x^Tz+1)^q,q&gt;0$</li>
+<li>高斯核：$k(x,z)=\exp(-\frac{||x-z||^2}{\sigma ^2})$</li>
+</ul>
+</li>
+</ol>
 </div>
                     <div class="post_footer">
                         

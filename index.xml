@@ -22,7 +22,7 @@
       <pubDate>Wed, 30 Nov 2022 16:52:31 +0800</pubDate>
       
       <guid>https://xjtu-ygq.github.io/posts/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/</guid>
-      <description>线性可分支持向量机 线性不可分支持向量机 非线性支持向量机</description>
+      <description>线性可分支持向量机 线性分类器$g(x)=w^Tx+w_0$存在分类面$g(x)=0$满足： 分类面与两类样本间距离相等 分类面与两类样本间距离最大 支持向量（狭义）：距离分类面最近的那几个点 线性鉴别函数与分</description>
     </item>
     
     <item>
