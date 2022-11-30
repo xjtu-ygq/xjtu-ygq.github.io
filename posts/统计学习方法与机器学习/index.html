@@ -261,6 +261,53 @@ $$</p>
 </ul>
 </li>
 </ol>
+<h2 id="支持向量机">支持向量机</h2>
+<ul>
+<li>参考：<a href="">支持向量机</a></li>
+</ul>
+<h2 id="朴素贝叶斯">朴素贝叶斯</h2>
+<ol>
+<li>
+<p>概念：基于贝叶斯定理和条件独立性假设，对给定x，求出后验概率最大的输出y</p>
+</li>
+<li>
+<p>条件独立性假设
+$$
+P(X=x|Y=c_k)=\Pi_{j=1}^nP(X^{(j)}=x^{(j)}|Y=c_k)
+$$</p>
+</li>
+<li>
+<p>贝叶斯定理
+$$
+P(Y=c_k|X=x)=\frac{P(X=x|Y=c_k)P(Y=c_k)}{\sum_kP(X=x|Y=c_k)P(Y=c_k)}
+$$</p>
+</li>
+<li>
+<p>朴素贝叶斯
+$$
+P(Y=c_k|X=x)=\frac{P(Y=c_k)\Pi_jP(X^{(j)}=x^{(j)}|Y=c_k)}{\sum_kP(Y=c_k)\Pi_jP(X^{(j)}=x^{(j)}|Y=c_k)}
+$$</p>
+</li>
+<li>
+<p>最大化
+$$
+y=\arg\max_{c_k}P(Y=c_k)\Pi_jP(X^{(j)}=x^{(j)}|Y=c_k)
+$$</p>
+</li>
+<li>
+<p>极大似然（<strong>参数</strong>）估计</p>
+<ul>
+<li>估计$P(Y=c_k)$和$P(X^{(j)}=x^{(j)}|Y=c_k)$，即先验概率和条件独立性假设</li>
+<li>估计即时，估计符合某种分布，如正太分布</li>
+<li>请注意，这里是用于$P(Y=c_k)$和$P(X^{(j)}=x^{(j)}|Y=c_k)$</li>
+<li>参考：<a href="https://zhuanlan.zhihu.com/p/26614750">一文搞懂极大似然估计</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="集成学习">集成学习</h2>
+<ul>
+<li>参考：<a href="">集成学习</a></li>
+</ul>
 </div>
                     <div class="post_footer">
                         
