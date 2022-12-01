@@ -13,7 +13,7 @@
       <pubDate>Wed, 30 Nov 2022 21:31:29 +0800</pubDate>
       
       <guid>https://xjtu-ygq.github.io/posts/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/</guid>
-      <description></description>
+      <description>Bagging 自主采样成多分类器 多个学习器并行训练，互不干扰，少数服从多数（投票表决） 随机森林 随机 随机样本 随机特征 森林 多个树并行，互不依赖 参考：什么是随机森林 &amp;lt;video id=&amp;ldquo;video&amp;rdquo; controls=&amp;ldquo;&amp;ldquo;src=&amp;ldquo;https://www.bilibili.com/video/BV11i4y1F7n4/&amp;quot; preload=&amp;ldquo;none&amp;rdquo;&amp;gt; Boosting 将弱学习器提升为强学习器 GBDT G：梯度 B：提升（</description>
     </item>
     
     <item>
