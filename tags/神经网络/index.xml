@@ -13,7 +13,7 @@
       <pubDate>Thu, 01 Dec 2022 18:53:25 +0800</pubDate>
       
       <guid>https://xjtu-ygq.github.io/posts/transformer/</guid>
-      <description></description>
+      <description>Encoder+Decoder Outputs是自己的输出，只在训练时加入，应用时不加入 $sub-layer=LayerNorm(x+SubLayer(x))$ Encoder的输出作为Decoder多头注意力机制的Q、K 激活函数采用Relu Attention 多头注意力机制是将Q、K、V进行全连接之后再进行h层的注意</description>
     </item>
     
   </channel>

@@ -13,7 +13,7 @@
 	
     
     
-    <meta name="description" content="" />
+    <meta name="description" content="Encoder&#43;Decoder Outputs是自己的输出，只在训练时加入，应用时不加入 $sub-layer=LayerNorm(x&#43;SubLayer(x))$ Encoder的输出作为Decoder多头注意力机制的Q、K 激活函数采用Relu Attention 多头注意力机制是将Q、K、V进行全连接之后再进行h层的注意" />
     
 
     
@@ -109,7 +109,163 @@
                         <h2><a href='/posts/transformer/'>Attention Is All You Need</a></h2>
                         <span class="date">2022.12.01</span>
                     </div>
-                    <div class="post_content markdown"></div>
+                    <div class="post_content markdown"><h2 id="encoderdecoder">Encoder+Decoder</h2>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/attention.png" alt="attention"></p>
+<ul>
+<li>Outputs是自己的输出，只在训练时加入，应用时不加入</li>
+<li>$sub-layer=LayerNorm(x+SubLayer(x))$</li>
+<li>Encoder的输出作为Decoder多头注意力机制的Q、K</li>
+<li>激活函数采用Relu</li>
+</ul>
+<h2 id="attention">Attention</h2>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20221202161843.png" alt="微信截图_20221202161843"></p>
+<ul>
+<li>
+<p>多头注意力机制是将Q、K、V进行全连接之后再进行h层的注意力机制（单头注意力机制只有点击，不能学习参数）</p>
+</li>
+<li>
+<p>Q、K乘积之后需要softmax，参考公式
+$$
+Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt {d_k}})V
+$$</p>
+</li>
+</ul>
+<h2 id="常见问题">常见问题</h2>
+<ol>
+<li>
+<p>Transformer为何使用多头注意力机制？（为什么不使用一个头）</p>
+<ul>
+<li>多头注意力机制是将Q、K、V进行linear，然后h层的注意力机制</li>
+<li>单头的只是简单的乘积，无法学习参数，改为多头可以学习捕捉更过信息，增强泛化能力</li>
+</ul>
+</li>
+<li>
+<p>Transformer为什么Q和K使用不同的权重矩阵生成，为何不能使用同一个值进行自身的点乘？ （注意和第一个问题的区别）</p>
+<ul>
+<li>Q与K的句长可能不一致，因此不能使用相同矩阵（$n\times d_k$与$d_k\times m$）</li>
+<li>如果同一值自身点乘，那么丢失了一个字在句子中的关联关系</li>
+</ul>
+</li>
+<li>
+<p>Transformer计算attention的时候为何选择点乘而不是加法？两者计算复杂度和效果上有什么区别？</p>
+<ul>
+<li>Q、K矩阵点乘，得到向量在不同空间的投影，增加表达能力（类似于，向量的相似度）</li>
+<li>加法复杂度较低，效果体现在$d_k$长度，当其很大是加法效果好</li>
+</ul>
+</li>
+<li>
+<p>为什么在进行softmax之前需要对attention进行scaled（为什么除以dk的平方根），并使用公式推导进行讲解</p>
+<ul>
+<li>除以$\sqrt {d_k}$是为了防止数据长尾效应，过大或过小，从而获得更加平缓的softmax</li>
+<li>公式略</li>
+</ul>
+</li>
+<li>
+<p>在计算attention score的时候如何对padding做mask操作？</p>
+<ul>
+<li>对需要mask的位置设为负无穷，那么这些负无穷进入softmax就会变成0</li>
+</ul>
+</li>
+<li>
+<p>为什么在进行多头注意力的时候需要对每个head进行降维？（可以参考上面一个问题）</p>
+<ul>
+<li>降维是为了保证维度相同，输入输出维度一致</li>
+</ul>
+</li>
+<li>
+<p>大概讲一下Transformer的Encoder模块？</p>
+<ul>
+<li>input-embedding-position-encoder（多头注意力机制、点式前馈网络）</li>
+</ul>
+</li>
+<li>
+<p>为何在获取输入词向量之后需要对矩阵乘以embedding size的开方？意义是什么？</p>
+<ul>
+<li>乘以embedding size的开方，使得方差为1，服从$N(0,1)$分布（有的句长有的句短？？）</li>
+<li>便于收敛和训练</li>
+</ul>
+</li>
+<li>
+<p>简单介绍一下Transformer的位置编码？有什么意义和优缺点？</p>
+<ul>
+<li>attention中没有体现位置信息，因此会有信息缺失</li>
+<li>加入绝对位置信息，捕捉更多信息</li>
+</ul>
+</li>
+<li>
+<p>你还了解哪些关于位置编码的技术，各自的优缺点是什么？</p>
+<ul>
+<li>相对位置编码（RPE）（类似于BST论文中的位置信息）</li>
+</ul>
+</li>
+<li>
+<p>简单讲一下Transformer中的残差结构以及意义。</p>
+<ul>
+<li>$sub-layer=LayerNorm(x+SubLayer(x))$</li>
+<li>反向传播时不会梯度消失</li>
+</ul>
+</li>
+<li>
+<p>为什么transformer块使用LayerNorm而不是BatchNorm？LayerNorm 在Transformer的位置是哪里？</p>
+<ul>
+<li>多头注意力层和激活函数层之间</li>
+<li>CV使用BN是认为channel维度的信息对cv方面有重要意义，如果对channel维度也归一化会造成不同通道信息一定的损失。而同理nlp领域认为句子长度不一致，并且各个batch的信息没什么关系，因此只考虑句子内信息的归一化，也就是LN</li>
+</ul>
+</li>
+<li>
+<p>简答讲一下BatchNorm技术，以及它的优缺点。</p>
+<ul>
+<li>批归一化是对每一批的数据在进入激活函数前进行归一化，可以提高收敛速度，防止过拟合，防止梯度消失，增加网络对数据的敏感度</li>
+</ul>
+</li>
+<li>
+<p>简单描述一下Transformer中的前馈神经网络？使用了什么激活函数？相关优缺点？</p>
+<ul>
+<li>
+<p>$$
+FFN(x)=max(0,xW_1+b_1)W_2+b_2
+$$</p>
+</li>
+<li>
+<p>Relu（收敛速度快，梯度不饱和，解决梯度消失问题）</p>
+</li>
+<li>
+<p>计算复杂度低，不需要进行指数运算</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Encoder端和Decoder端是如何进行交互的？（在这里可以问一下关于seq2seq的attention知识）</p>
+<ul>
+<li>Encoder的输出作为Decoder多头注意力机制的Q、K</li>
+</ul>
+</li>
+<li>
+<p>Decoder阶段的多头自注意力和encoder的多头自注意力有什么区别？（为什么需要decoder自注意力需要进行 sequence mask)</p>
+<ul>
+<li>Decoder有掩码多头自注意力机制和多头自注意力机制，Encoder只有多头自注意力机制</li>
+<li>Encoder多头自注意力机制的QKV是同一个</li>
+<li>保证mask信息不会被提前使用</li>
+</ul>
+</li>
+<li>
+<p>Transformer的并行化提现在哪个地方？Decoder端可以做并行化吗？</p>
+<ul>
+<li>主要体现在self-attention模块（不是sublayer之间的并行化，它们是串行的）</li>
+<li>Decoder没有并行化（<strong>Decoder的并行化仅在训练阶段，在测试阶段，因为我们没有正确的目标语句，t时刻的输入必然依赖t-1时刻的输出，这时跟之前的seq2seq就没什么区别了</strong>）</li>
+</ul>
+</li>
+<li>
+<p>简单描述一下wordpiece model 和 byte pair encoding，有实际应用过吗？</p>
+</li>
+<li>
+<p>Transformer训练的时候学习率是如何设定的？Dropout是如何设定的，位置在哪里？Dropout 在测试的需要有什么需要注意的吗？</p>
+</li>
+<li>
+<p>引申一个关于bert问题，bert的mask为何不学习transformer在attention处进行屏蔽score的技巧？</p>
+</li>
+</ol>
+</div>
                     <div class="post_footer">
                         
                         <div class="meta">
