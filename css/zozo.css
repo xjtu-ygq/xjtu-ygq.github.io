@@ -592,6 +592,11 @@ html body li>p {
   height: auto;
 }
 
+
+table {
+    margin: 0.8em 0;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
