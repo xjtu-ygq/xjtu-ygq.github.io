@@ -595,8 +595,8 @@ html body li>p {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  table-layout: fixed;
-  word-break:break-all;
+  /*table-layout: fixed;
+  word-break:break-all;*/
 }
 
 
