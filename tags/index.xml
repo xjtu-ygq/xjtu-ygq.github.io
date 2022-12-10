@@ -6,7 +6,52 @@
     <description>Recent content in Tags on Yin Guangqi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Dec 2022 21:48:16 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Dec 2022 20:47:21 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recall</title>
+      <link>https://xjtu-ygq.github.io/tags/recall/</link>
+      <pubDate>Sat, 10 Dec 2022 20:47:21 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/tags/recall/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>YouTubeDNN</title>
+      <link>https://xjtu-ygq.github.io/tags/youtubednn/</link>
+      <pubDate>Sat, 10 Dec 2022 20:47:21 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/tags/youtubednn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>召回</title>
+      <link>https://xjtu-ygq.github.io/tags/%E5%8F%AC%E5%9B%9E/</link>
+      <pubDate>Sat, 10 Dec 2022 20:47:21 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/tags/%E5%8F%AC%E5%9B%9E/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>推荐算法</title>
+      <link>https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sat, 10 Dec 2022 20:47:21 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>推荐系统</title>
+      <link>https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Sat, 10 Dec 2022 20:47:21 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Attention</title>
       <link>https://xjtu-ygq.github.io/tags/attention/</link>
@@ -157,24 +202,6 @@
       <pubDate>Tue, 29 Nov 2022 14:56:03 +0800</pubDate>
       
       <guid>https://xjtu-ygq.github.io/tags/din/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>推荐算法</title>
-      <link>https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Tue, 29 Nov 2022 14:56:03 +0800</pubDate>
-      
-      <guid>https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>推荐系统</title>
-      <link>https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</link>
-      <pubDate>Mon, 28 Nov 2022 16:19:03 +0800</pubDate>
-      
-      <guid>https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</guid>
       <description></description>
     </item>
     
