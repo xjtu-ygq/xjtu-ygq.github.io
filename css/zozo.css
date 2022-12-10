@@ -592,18 +592,16 @@ html body li>p {
   height: auto;
 }
 
-
-table {
-    margin: 0.8em 0;
-}
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  table-layout: fixed;
+  word-break:break-all;
 }
 
+
 table th {
-  background-color: #f6f8fa;
+    background-color: #f6f8fa;
 }
 
 table th, table td {
