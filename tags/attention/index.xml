@@ -13,7 +13,7 @@
       <pubDate>Fri, 02 Dec 2022 21:48:16 +0800</pubDate>
       
       <guid>https://xjtu-ygq.github.io/posts/transformer%E7%9A%84pytorch%E5%AE%9E%E7%8E%B0/</guid>
-      <description>写在前面 Transformer主要分为图示12块，详细介绍参考，参考The Annotated Transformer的中文注释版 前置知识：切记了解pytorch的class类使用规则 class定义-&amp;gt;对象-&amp;gt</description>
+      <description>写在前面 Transformer主要分为图示12块，详细介绍请参考 The Annotated Transformer The Annotated Transformer的中文注释版 前置知识：切记了解pytorch的class类使用规则 class定义-&amp;gt;对象-&amp;gt;</description>
     </item>
     
     <item>
