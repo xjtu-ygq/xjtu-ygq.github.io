@@ -115,7 +115,7 @@
     
     <div class="list">
         <div class="post_content markdown">
-            <p>快手 最长递增子序列 public int lengthOfLIS(int[] nums) { int n=nums.length; if(n==0) return 0; int[] dp=new int[n]; Arrays.fill(dp,1); int res=1; for(int i=0;i&lt;n-1;i++){ for(int j=i+1;j&lt;n;j++){ if(nums[i]&lt;nums[j]){ dp[j]=Math.max(dp[j],dp[i]+1); } res=Math.max(res,dp[j]); } } return res; } 消失的两个数字 List&lt;Integer&gt; res; public int[] missingTwo(int[] nums) { res=new LinkedList&lt;&gt;(); int n=nums.length; Arrays.sort(nums); for(int i=1;i&lt;=n;i++){ if(nums[i-1]==i+res.size()) continue; else if(nums[i-1]==i+1+res.size()) res.add(nums[i-1]-1); else { res.add(nums[i-1]-1); res.add(nums[i-1]-2); } if(res.size()==2) break; } if(res.size()==0){ res.add(nums[n-1]+1); res.add(nums[n-1]+2); }else if(res.size()==1){ res.add(nums[n-1]+1); } return new int[]{res.get(0),res.get(1)}; }......</p>
+            <p>快手 最长递增子序列 public int lengthOfLIS(int[] nums) { int n=nums.length; if(n==0) return 0; int[] dp=new int[n]; Arrays.fill(dp,1); int res=1; for(int i=0;i&lt;n-1;i++){ for(int j=i+1;j&lt;n;j++){ if(nums[i]&lt;nums[j]){ dp[j]=Math.max(dp[j],dp[i]+1); } res=Math.max(res,dp[j]); } } return res; } 消失的两个数字 List&lt;Integer&gt; res; public int[] missingTwo(int[] nums) { res=new LinkedList&lt;&gt;(); int n=nums.length; Arrays.sort(nums); for(int i=1;i&lt;=n;i++){ if(nums[i-1]==i+res.size()) continue; else if(nums[i-1]==i+1+res.size()) res.add(nums[i-1]-1); else { res.add(nums[i-1]-1); res.add(nums[i-1]-2); } if(res.size()==2) break; } if(res.size()==0){ res.add(nums[n-1]+1); res.add(nums[n-1]+2); }else if(res.size()==1){ res.add(nums[n-1]+1); } return new int[]{res.get(0),res.get(1)}; } 从链表中删去总和值为零的连续节点 public......</p>
         </div>
     </div>
     
