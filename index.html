@@ -110,6 +110,39 @@
 
 <div class="post animated fadeInDown">
     <div class="post_title">
+        <h2><a href='/posts/%E7%BC%96%E7%A8%8B%E9%A2%98/'>编程题</a></h2>
+    </div>
+    
+    <div class="list">
+        <div class="post_content markdown">
+            <p>快手 最长递增子序列 public int lengthOfLIS(int[] nums) { int n=nums.length; if(n==0) return 0; int[] dp=new int[n]; Arrays.fill(dp,1); int res=1; for(int i=0;i&lt;n-1;i++){ for(int j=i+1;j&lt;n;j++){ if(nums[i]&lt;nums[j]){ dp[j]=Math.max(dp[j],dp[i]+1); } res=Math.max(res,dp[j]); } } return res; } 消失的两个数字 List&lt;Integer&gt; res; public int[] missingTwo(int[] nums) { res=new LinkedList&lt;&gt;(); int n=nums.length; Arrays.sort(nums); for(int i=1;i&lt;=n;i++){ if(nums[i-1]==i+res.size()) continue; else if(nums[i-1]==i+1+res.size()) res.add(nums[i-1]-1); else { res.add(nums[i-1]-1); res.add(nums[i-1]-2); } if(res.size()==2) break; } if(res.size()==0){ res.add(nums[n-1]+1); res.add(nums[n-1]+2); }else if(res.size()==1){ res.add(nums[n-1]+1); } return new int[]{res.get(0),res.get(1)}; }......</p>
+        </div>
+    </div>
+    
+    <div class="post_footer">
+        <div class="meta">
+            <div class="info">
+                <span class="field">
+                    <i class="ri-map-pin-time-line"></i>
+                    <span class="date">2022.12.28</span>
+                </span>
+                
+                <span class="field tags">
+                    <i class="ri-stack-line"></i>
+                    
+                    <a href="https://xjtu-ygq.github.io/tags/leetcode/">LeetCode</a>
+                    
+                    <a href="https://xjtu-ygq.github.io/tags/%E5%BF%AB%E6%89%8B/">快手</a>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="post animated fadeInDown">
+    <div class="post_title">
         <h2><a href='/posts/youtubednn/'>YouTubeDNN</a></h2>
     </div>
     
@@ -213,41 +246,6 @@
                     <a href="https://xjtu-ygq.github.io/tags/attention/">Attention</a>
                     
                     <a href="https://xjtu-ygq.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="post animated fadeInDown">
-    <div class="post_title">
-        <h2><a href='/posts/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/'>集成学习</a></h2>
-    </div>
-    
-    <div class="list">
-        <div class="post_content markdown">
-            <p>Bagging 自主采样成多分类器 多个学习器并行训练，互不干扰，少数服从多数（投票表决） 随机森林 随机 随机样本 随机特征 森林 多个树并行，互不依赖 参考：什么是随机森林 Boosting 将弱学习器提升为强学习器 GBDT G：梯度 B：提升（boos......</p>
-        </div>
-    </div>
-    
-    <div class="post_footer">
-        <div class="meta">
-            <div class="info">
-                <span class="field">
-                    <i class="ri-map-pin-time-line"></i>
-                    <span class="date">2022.11.30</span>
-                </span>
-                
-                <span class="field tags">
-                    <i class="ri-stack-line"></i>
-                    
-                    <a href="https://xjtu-ygq.github.io/tags/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/">集成学习</a>
-                    
-                    <a href="https://xjtu-ygq.github.io/tags/bagging/">bagging</a>
-                    
-                    <a href="https://xjtu-ygq.github.io/tags/boosting/">boosting</a>
                     
                 </span>
                 

@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xjtu-ygq.github.io/posts/</loc>
-    <lastmod>2022-12-10T20:47:21+08:00</lastmod>
+    <loc>https://xjtu-ygq.github.io/tags/leetcode/</loc>
+    <lastmod>2022-12-28T20:02:12+08:00</lastmod>
   </url><url>
-    <loc>https://xjtu-ygq.github.io/tags/recall/</loc>
-    <lastmod>2022-12-10T20:47:21+08:00</lastmod>
+    <loc>https://xjtu-ygq.github.io/posts/</loc>
+    <lastmod>2022-12-28T20:02:12+08:00</lastmod>
   </url><url>
     <loc>https://xjtu-ygq.github.io/tags/</loc>
-    <lastmod>2022-12-10T20:47:21+08:00</lastmod>
+    <lastmod>2022-12-28T20:02:12+08:00</lastmod>
   </url><url>
     <loc>https://xjtu-ygq.github.io/</loc>
+    <lastmod>2022-12-28T20:02:12+08:00</lastmod>
+  </url><url>
+    <loc>https://xjtu-ygq.github.io/tags/%E5%BF%AB%E6%89%8B/</loc>
+    <lastmod>2022-12-28T20:02:12+08:00</lastmod>
+  </url><url>
+    <loc>https://xjtu-ygq.github.io/posts/%E7%BC%96%E7%A8%8B%E9%A2%98/</loc>
+    <lastmod>2022-12-28T20:02:12+08:00</lastmod>
+  </url><url>
+    <loc>https://xjtu-ygq.github.io/tags/recall/</loc>
     <lastmod>2022-12-10T20:47:21+08:00</lastmod>
   </url><url>
     <loc>https://xjtu-ygq.github.io/tags/youtubednn/</loc>

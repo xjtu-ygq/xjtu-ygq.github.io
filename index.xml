@@ -6,7 +6,16 @@
     <description>Recent content on Yin Guangqi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Dec 2022 20:47:21 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Dec 2022 20:02:12 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>编程题</title>
+      <link>https://xjtu-ygq.github.io/posts/%E7%BC%96%E7%A8%8B%E9%A2%98/</link>
+      <pubDate>Wed, 28 Dec 2022 20:02:12 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/posts/%E7%BC%96%E7%A8%8B%E9%A2%98/</guid>
+      <description>快手 最长递增子序列 public int lengthOfLIS(int[] nums) { int n=nums.length; if(n==0) return 0; int[] dp=new int[n]; Arrays.fill(dp,1); int res=1; for(int i=0;i&amp;lt;n-1;i++){ for(int j=i+1;j&amp;lt;n;j++){ if(nums[i]&amp;lt;nums[j]){ dp[j]=Math.max(dp[j],dp[i]+1); } res=Math.max(res,dp[j]); } } return res; } 消失的两个数字 List&amp;lt;Integer&amp;gt; res; public int[] missingTwo(int[] nums) { res=new LinkedList&amp;lt;&amp;gt;(); int n=nums.length; Arrays.sort(nums); for(int i=1;i&amp;lt;=n;i++){ if(nums[i-1]==i+res.size()) continue; else if(nums[i-1]==i+1+res.size()) res.add(nums[i-1]-1); else { res.add(nums[i-1]-1); res.add(nums[i-1]-2); } if(res.size()==2) break; } if(res.size()==0){ res.add(nums[n-1]+1); res.add(nums[n-1]+2); }else if(res.size()==1){ res.add(nums[n-1]+1); } return new int[]{res.get(0),res.get(1)}; }</description>
+    </item>
+    
     <item>
       <title>YouTubeDNN</title>
       <link>https://xjtu-ygq.github.io/posts/youtubednn/</link>
