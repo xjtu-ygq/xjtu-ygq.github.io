@@ -8,12 +8,12 @@
     <language>en</language>
     <lastBuildDate>Wed, 28 Dec 2022 20:02:12 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>编程题</title>
-      <link>https://xjtu-ygq.github.io/posts/%E7%BC%96%E7%A8%8B%E9%A2%98/</link>
+      <title>模拟面试</title>
+      <link>https://xjtu-ygq.github.io/posts/%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95/</link>
       <pubDate>Wed, 28 Dec 2022 20:02:12 +0800</pubDate>
       
-      <guid>https://xjtu-ygq.github.io/posts/%E7%BC%96%E7%A8%8B%E9%A2%98/</guid>
-      <description>快手 最长递增子序列 public int lengthOfLIS(int[] nums) { int n=nums.length; if(n==0) return 0; int[] dp=new int[n]; Arrays.fill(dp,1); int res=1; for(int i=0;i&amp;lt;n-1;i++){ for(int j=i+1;j&amp;lt;n;j++){ if(nums[i]&amp;lt;nums[j]){ dp[j]=Math.max(dp[j],dp[i]+1); } res=Math.max(res,dp[j]); } } return res; } 消失的两个数字 List&amp;lt;Integer&amp;gt; res; public int[] missingTwo(int[] nums) { res=new LinkedList&amp;lt;&amp;gt;(); int n=nums.length; Arrays.sort(nums); for(int i=1;i&amp;lt;=n;i++){ if(nums[i-1]==i+res.size()) continue; else if(nums[i-1]==i+1+res.size()) res.add(nums[i-1]-1); else { res.add(nums[i-1]-1); res.add(nums[i-1]-2); } if(res.size()==2) break; } if(res.size()==0){ res.add(nums[n-1]+1); res.add(nums[n-1]+2); }else if(res.size()==1){ res.add(nums[n-1]+1); } return new int[]{res.get(0),res.get(1)}; } 从链表中删去总和值为零的连续节点 public</description>
+      <guid>https://xjtu-ygq.github.io/posts/%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95/</guid>
+      <description>快手 两数相除 class Solution { public int divide(int dividend, int divisor) { int res=0; if(dividend==Integer.MIN_VALUE&amp;amp;&amp;amp;divisor==-1) return Integer.MAX_VALUE; int sign=(dividend&amp;gt;0)^(divisor&amp;gt;0)?-1:1; dividend=Math.abs(dividend); divisor=Math.abs(divisor); for(int i=31;i&amp;gt;=0;i--){ if((dividend&amp;gt;&amp;gt;&amp;gt;i)-divisor&amp;gt;=0){ dividend-=(divisor&amp;lt;&amp;lt;i); res+=(1&amp;lt;&amp;lt;i); } } return sign==1?res:-res; } } 复原 IP 地址 class Solution { public int divide(int dividend, int divisor) { int res=0; if(dividend==Integer.MIN_VALUE&amp;amp;&amp;amp;divisor==-1) return Integer.MAX_VALUE; int sign=(dividend&amp;gt;0)^(divisor&amp;gt;0)?-1:1; dividend=Math.abs(dividend); divisor=Math.abs(divisor); for(int i=31;i&amp;gt;=0;i--){ if((dividend&amp;gt;&amp;gt;&amp;gt;i)-divisor&amp;gt;=0){ dividend-=(divisor&amp;lt;&amp;lt;i); res+=(1&amp;lt;&amp;lt;i); } } return sign==1?res:-res; } } 24 点游戏 private static final double target=24; private static final double epsilon=1e-6; public boolean judgePoint24(int[] cards) { return helper(new double[]{cards[0],cards[1],cards[2],cards[3]}); } public boolean helper(double[] nums){ if(nums.length==1){ return</description>
     </item>
     
     <item>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="VarKai" />
+    <meta name="referrer" content="never">
+	
+	
+	
+	<title>模拟面试 ｜ Yin Guangqi</title>
+	
+    
+    
+    <meta name="description" content="快手 两数相除 class Solution { public int divide(int dividend, int divisor) { int res=0; if(dividend==Integer.MIN_VALUE&amp;amp;&amp;amp;divisor==-1) return Integer.MAX_VALUE; int sign=(dividend&amp;gt;0)^(divisor&amp;gt;0)?-1:1; dividend=Math.abs(dividend); divisor=Math.abs(divisor); for(int i=31;i&amp;gt;=0;i--){ if((dividend&amp;gt;&amp;gt;&amp;gt;i)-divisor&amp;gt;=0){ dividend-=(divisor&amp;lt;&amp;lt;i); res&#43;=(1&amp;lt;&amp;lt;i); } } return sign==1?res:-res; } } 复原 IP 地址 class Solution { public int divide(int dividend, int divisor) { int res=0; if(dividend==Integer.MIN_VALUE&amp;amp;&amp;amp;divisor==-1) return Integer.MAX_VALUE; int sign=(dividend&amp;gt;0)^(divisor&amp;gt;0)?-1:1; dividend=Math.abs(dividend); divisor=Math.abs(divisor); for(int i=31;i&amp;gt;=0;i--){ if((dividend&amp;gt;&amp;gt;&amp;gt;i)-divisor&amp;gt;=0){ dividend-=(divisor&amp;lt;&amp;lt;i); res&#43;=(1&amp;lt;&amp;lt;i); } } return sign==1?res:-res; } } 24 点游戏 private static final double target=24; private static final double epsilon=1e-6; public boolean judgePoint24(int[] cards) { return helper(new double[]{cards[0],cards[1],cards[2],cards[3]}); } public boolean helper(double[] nums){ if(nums.length==1){ return" />
+    
+
+    
+    
+    <meta name="keywords" content="LeetCode, 模拟面试, 快手" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://xjtu-ygq.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://xjtu-ygq.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://xjtu-ygq.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://xjtu-ygq.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://xjtu-ygq.github.io/">
+                    <span>Yin Guangqi</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">一日之计在于晨</p>
+            <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="twitter" target="_blank"><i class="ri-twitter-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://xjtu-ygq.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/posts/%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95/'>模拟面试</a></h2>
+                        <span class="date">2022.12.28</span>
+                    </div>
+                    <div class="post_content markdown"><h2 id="快手">快手</h2>
+<ul>
+<li>
+<p>两数相除</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">divide</span><span class="o">(</span><span class="kt">int</span> <span class="n">dividend</span><span class="o">,</span> <span class="kt">int</span> <span class="n">divisor</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">res</span><span class="o">=</span><span class="n">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">dividend</span><span class="o">==</span><span class="n">Integer</span><span class="o">.</span><span class="na">MIN_VALUE</span><span class="o">&amp;&amp;</span><span class="n">divisor</span><span class="o">==-</span><span class="n">1</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">sign</span><span class="o">=(</span><span class="n">dividend</span><span class="o">&gt;</span><span class="n">0</span><span class="o">)^(</span><span class="n">divisor</span><span class="o">&gt;</span><span class="n">0</span><span class="o">)?-</span><span class="n">1</span><span class="o">:</span><span class="n">1</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dividend</span><span class="o">=</span><span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">dividend</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">divisor</span><span class="o">=</span><span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">divisor</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">31</span><span class="o">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="n">0</span><span class="o">;</span><span class="n">i</span><span class="o">--){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="o">((</span><span class="n">dividend</span><span class="o">&gt;&gt;&gt;</span><span class="n">i</span><span class="o">)-</span><span class="n">divisor</span><span class="o">&gt;=</span><span class="n">0</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">                <span class="n">dividend</span><span class="o">-=(</span><span class="n">divisor</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">+=(</span><span class="n">1</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">sign</span><span class="o">==</span><span class="n">1</span><span class="o">?</span><span class="n">res</span><span class="o">:-</span><span class="n">res</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>复原 IP 地址</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">divide</span><span class="o">(</span><span class="kt">int</span> <span class="n">dividend</span><span class="o">,</span> <span class="kt">int</span> <span class="n">divisor</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">res</span><span class="o">=</span><span class="n">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">dividend</span><span class="o">==</span><span class="n">Integer</span><span class="o">.</span><span class="na">MIN_VALUE</span><span class="o">&amp;&amp;</span><span class="n">divisor</span><span class="o">==-</span><span class="n">1</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">sign</span><span class="o">=(</span><span class="n">dividend</span><span class="o">&gt;</span><span class="n">0</span><span class="o">)^(</span><span class="n">divisor</span><span class="o">&gt;</span><span class="n">0</span><span class="o">)?-</span><span class="n">1</span><span class="o">:</span><span class="n">1</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dividend</span><span class="o">=</span><span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">dividend</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">divisor</span><span class="o">=</span><span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">divisor</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">31</span><span class="o">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="n">0</span><span class="o">;</span><span class="n">i</span><span class="o">--){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="o">((</span><span class="n">dividend</span><span class="o">&gt;&gt;&gt;</span><span class="n">i</span><span class="o">)-</span><span class="n">divisor</span><span class="o">&gt;=</span><span class="n">0</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">                <span class="n">dividend</span><span class="o">-=(</span><span class="n">divisor</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">+=(</span><span class="n">1</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">sign</span><span class="o">==</span><span class="n">1</span><span class="o">?</span><span class="n">res</span><span class="o">:-</span><span class="n">res</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>24 点游戏</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">target</span><span class="o">=</span><span class="n">24</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">epsilon</span><span class="o">=</span><span class="n">1e</span><span class="o">-</span><span class="n">6</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">judgePoint24</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">cards</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">helper</span><span class="o">(</span><span class="k">new</span> <span class="kt">double</span><span class="o">[]{</span><span class="n">cards</span><span class="o">[</span><span class="n">0</span><span class="o">],</span><span class="n">cards</span><span class="o">[</span><span class="n">1</span><span class="o">],</span><span class="n">cards</span><span class="o">[</span><span class="n">2</span><span class="o">],</span><span class="n">cards</span><span class="o">[</span><span class="n">3</span><span class="o">]});</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">helper</span><span class="o">(</span><span class="kt">double</span><span class="o">[]</span> <span class="n">nums</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">==</span><span class="n">1</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">nums</span><span class="o">[</span><span class="n">0</span><span class="o">]-</span><span class="n">target</span><span class="o">)&lt;</span><span class="n">epsilon</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="n">1</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">j</span><span class="o">++){</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">double</span><span class="o">[]</span> <span class="n">next</span><span class="o">=</span><span class="k">new</span> <span class="kt">double</span><span class="o">[</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="n">1</span><span class="o">];</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="n">0</span><span class="o">,</span><span class="n">pos</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">k</span><span class="o">&lt;</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">k</span><span class="o">++){</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span><span class="o">(</span><span class="n">k</span><span class="o">!=</span><span class="n">i</span><span class="o">&amp;&amp;</span><span class="n">k</span><span class="o">!=</span><span class="n">j</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">next</span><span class="o">[</span><span class="n">pos</span><span class="o">++]=</span><span class="n">nums</span><span class="o">[</span><span class="n">k</span><span class="o">];</span>
+</span></span><span class="line"><span class="cl">                    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span><span class="o">(</span><span class="kt">double</span> <span class="n">num</span><span class="o">:</span><span class="n">calculate</span><span class="o">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">],</span><span class="n">nums</span><span class="o">[</span><span class="n">j</span><span class="o">])){</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">next</span><span class="o">[</span><span class="n">next</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="n">1</span><span class="o">]=</span><span class="n">num</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span><span class="o">(</span><span class="n">helper</span><span class="o">(</span><span class="n">next</span><span class="o">))</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                <span class="o">}</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="nf">calculate</span><span class="o">(</span><span class="kt">double</span> <span class="n">a</span><span class="o">,</span> <span class="kt">double</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">List</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">(!(</span><span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">b</span><span class="o">)</span> <span class="o">&lt;</span> <span class="n">epsilon</span><span class="o">))</span> <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">(!(</span><span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="o">&lt;</span> <span class="n">epsilon</span><span class="o">))</span> <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">b</span> <span class="o">/</span> <span class="n">a</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>删除排序链表中的重复元素</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">ListNode</span> <span class="nf">deleteDuplicates</span><span class="o">(</span><span class="n">ListNode</span> <span class="n">head</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">head</span><span class="o">==</span><span class="kc">null</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">head</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ListNode</span> <span class="n">slow</span><span class="o">=</span><span class="n">head</span><span class="o">,</span><span class="n">fast</span><span class="o">=</span><span class="n">head</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="o">(</span><span class="n">fast</span><span class="o">!=</span><span class="kc">null</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="o">(</span><span class="n">slow</span><span class="o">.</span><span class="na">val</span><span class="o">!=</span><span class="n">fast</span><span class="o">.</span><span class="na">val</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">                <span class="n">slow</span><span class="o">.</span><span class="na">next</span><span class="o">=</span><span class="n">fast</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">slow</span><span class="o">=</span><span class="n">slow</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">fast</span><span class="o">=</span><span class="n">fast</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">slow</span><span class="o">.</span><span class="na">next</span><span class="o">=</span><span class="kc">null</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">head</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>杨辉三角</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="nf">generate</span><span class="o">(</span><span class="kt">int</span> <span class="n">numRows</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">List</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">res</span><span class="o">=</span><span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">numRows</span><span class="o">==</span><span class="n">0</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">res</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">num1</span><span class="o">=</span><span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">num1</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">1</span><span class="o">);</span><span class="n">res</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">num1</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">numRows</span><span class="o">==</span><span class="n">1</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">res</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">2</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">numRows</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+</span></span><span class="line"><span class="cl">            <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">tmp</span><span class="o">=</span><span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
+</span></span><span class="line"><span class="cl">            <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">last</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">res</span><span class="o">.</span><span class="na">size</span><span class="o">()-</span><span class="n">1</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">tmp</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">1</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">1</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">i</span><span class="o">-</span><span class="n">1</span><span class="o">;</span><span class="n">j</span><span class="o">++){</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tmp</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">last</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">j</span><span class="o">-</span><span class="n">1</span><span class="o">)+</span><span class="n">last</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">j</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">tmp</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">1</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">tmp</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>等差数列划分</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">numberOfArithmeticSlices</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">res</span><span class="o">=</span><span class="n">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">&lt;=</span><span class="n">2</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span><span class="o">[]</span> <span class="n">dp</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="n">1</span><span class="o">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">1</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="n">1</span><span class="o">]=</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]-</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="n">1</span><span class="o">];</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">dp</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="n">1</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="n">1</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">dp</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">j</span><span class="o">++){</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">j</span><span class="o">]!=</span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">]){</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">break</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="o">(</span><span class="n">j</span><span class="o">&lt;</span><span class="n">dp</span><span class="o">.</span><span class="na">length</span><span class="o">&amp;&amp;</span><span class="n">dp</span><span class="o">[</span><span class="n">j</span><span class="o">]==</span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">]){</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">j</span><span class="o">++;</span>
+</span></span><span class="line"><span class="cl">                <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">len</span><span class="o">=</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">+=</span><span class="n">len</span><span class="o">*(</span><span class="n">len</span><span class="o">-</span><span class="n">1</span><span class="o">)/</span><span class="n">2</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">i</span><span class="o">=</span><span class="n">j</span><span class="o">-</span><span class="n">1</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div></li>
+<li></li>
+</ul>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/leetcode/">LeetCode</a>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95/">模拟面试</a>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/%E5%BF%AB%E6%89%8B/">快手</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="http://github.com/xjtu-ygq">© xjtu-ygq | </a>
+     
+        <a href="http://www.gohugo.io/">Powered by Hugo | </a>
+        <a href="https://zozo.varkai.com/">Theme - varkai | </a>
+        
+    </div>
+
+    
+    
+</footer>
+    <script src="https://xjtu-ygq.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://xjtu-ygq.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://xjtu-ygq.github.io/js/fancybox.min.js"></script>
+<script src="https://xjtu-ygq.github.io/js/zozo.js"></script>
+
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+
+
+</body>
+
+</html>
