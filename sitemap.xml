@@ -2,16 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xjtu-ygq.github.io/tags/leetcode/</loc>
-    <lastmod>2022-12-28T20:02:12+08:00</lastmod>
+    <loc>https://xjtu-ygq.github.io/tags/lr/</loc>
+    <lastmod>2023-02-02T09:47:27+08:00</lastmod>
+  </url><url>
+    <loc>https://xjtu-ygq.github.io/posts/lr%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/</loc>
+    <lastmod>2023-02-02T09:47:27+08:00</lastmod>
   </url><url>
     <loc>https://xjtu-ygq.github.io/posts/</loc>
-    <lastmod>2022-12-28T20:02:12+08:00</lastmod>
+    <lastmod>2023-02-02T09:47:27+08:00</lastmod>
   </url><url>
     <loc>https://xjtu-ygq.github.io/tags/</loc>
-    <lastmod>2022-12-28T20:02:12+08:00</lastmod>
+    <lastmod>2023-02-02T09:47:27+08:00</lastmod>
   </url><url>
     <loc>https://xjtu-ygq.github.io/</loc>
+    <lastmod>2023-02-02T09:47:27+08:00</lastmod>
+  </url><url>
+    <loc>https://xjtu-ygq.github.io/tags/%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/</loc>
+    <lastmod>2023-02-02T09:47:27+08:00</lastmod>
+  </url><url>
+    <loc>https://xjtu-ygq.github.io/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</loc>
+    <lastmod>2023-02-02T09:47:27+08:00</lastmod>
+  </url><url>
+    <loc>https://xjtu-ygq.github.io/tags/leetcode/</loc>
     <lastmod>2022-12-28T20:02:12+08:00</lastmod>
   </url><url>
     <loc>https://xjtu-ygq.github.io/tags/%E5%BF%AB%E6%89%8B/</loc>
