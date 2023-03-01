@@ -9,21 +9,19 @@
 	
 	
 	
-	<title>推荐算法 ｜ Yin Guangqi</title>
+	<title>DeepCTR模型框架 ｜ Yin Guangqi</title>
 	
     
     
-    <meta name="description" content="Hugo theme zozo example site." />
+    <meta name="description" content="参考：torch-rechub 源码： Wide&amp;amp;Deep、DeepFM、DCN 数据集：Criteo 注意： 用于实际项目时，主要修改data.py文件，进行数据处理 数据处理中使用了LabelEnco" />
     
 
     
     
-    <meta name="keywords" content="Hugo, theme, zozo" />
+    <meta name="keywords" content="Wide&Deep, DeepFM, DCN, DIN, DeepCTR, 推荐算法" />
     
 
 	
-	<link rel="alternate" type="application/rss+xml" href="https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/index.xml" title="Yin Guangqi" />
-    
     
     <link rel="shortcut icon" href="https://xjtu-ygq.github.io/images/favicon.ico" />
 
@@ -105,51 +103,92 @@
     </div>
 </div>
         <div class="content">
-            <div class="list_with_title">
-                
-                <div class="listing_title">2023</div>
-                <div class="listing">
-                    
-                    <div class="listing_item">
-                        <div class="listing_post">
-                            <a href="/posts/deepctr%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6/">DeepCTR模型框架</a>
-                            <div class="post_time"><span class="date">03-01</span></div>
-                        </div>
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/posts/deepctr%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6/'>DeepCTR模型框架</a></h2>
+                        <span class="date">2023.03.01</span>
                     </div>
-                    
+                    <div class="post_content markdown"><p>参考：<a href="https://github.com/datawhalechina/torch-rechub">torch-rechub</a></p>
+<p>源码：</p>
+<h2 id="widedeepdeepfmdcn">Wide&amp;Deep、DeepFM、DCN</h2>
+<ol>
+<li>
+<p>数据集：Criteo</p>
+</li>
+<li>
+<p>注意：</p>
+<ul>
+<li>
+<p>用于实际项目时，主要修改data.py文件，进行数据处理</p>
+</li>
+<li>
+<p>数据处理中使用了LabelEncoder，处理前保存编号信息以免出错</p>
+</li>
+<li>
+<p>Sparse和Dense特征的处理：</p>
+<ul>
+<li>
+<p>sparse属于稀疏特征，一般经过LabelEncoder，最后进行Embedding</p>
+</li>
+<li>
+<p>dense属于稠密特征，可以先进行对数离散化再进行归一化，这类数据不经过Embedding，可直接进入模型</p>
+</li>
+</ul>
+</li>
+<li>
+<p>模型的输入注意左右侧是sparse和dense</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="dindienbst">DIN（DIEN、BST）</h2>
+<ol>
+<li>数据集：Amazon</li>
+<li>注意：
+<ul>
+<li>data.py使用了LabelEncoder，注意数据保存</li>
+<li>此数据没有负样本，这里采用了等比例负采样，用于实际项目时注意采样规则或不采样</li>
+<li>模型中缺少dense特征的输入，根据实际情况添加，参考Wide&amp;Deep</li>
+</ul>
+</li>
+</ol>
+<h2 id="mmoeple">MMOE、PLE</h2>
+<h2 id="youtubednndssm">YoutubeDNN、DSSM</h2>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/widedeep/">Wide&amp;Deep</a>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/deepfm/">DeepFM</a>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/dcn/">DCN</a>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/din/">DIN</a>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/deepctr/">DeepCTR</a>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/">推荐算法</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
                 
-                <div class="listing_title">2022</div>
-                <div class="listing">
-                    
-                    <div class="listing_item">
-                        <div class="listing_post">
-                            <a href="/posts/youtubednn/">YouTubeDNN</a>
-                            <div class="post_time"><span class="date">12-10</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="listing_item">
-                        <div class="listing_post">
-                            <a href="/posts/alibaba%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95%E6%A8%A1%E5%9E%8B/">Alibaba推荐算法模型</a>
-                            <div class="post_time"><span class="date">11-29</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="listing_item">
-                        <div class="listing_post">
-                            <a href="/posts/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/">《深度学习推荐系统》笔记</a>
-                            <div class="post_time"><span class="date">11-28</span></div>
-                        </div>
-                    </div>
-                    
-                </div>
+                
+                <div class="doc_comments"></div>
                 
             </div>
-            <div class="pagination"></div>
         </div>
-        <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
     <footer class="footer">
     <div class="powered_by">
         <a href="http://github.com/xjtu-ygq">© xjtu-ygq | </a>

@@ -6,7 +6,16 @@
     <description>Recent content on Yin Guangqi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Feb 2023 09:47:27 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Mar 2023 14:38:33 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DeepCTR模型框架</title>
+      <link>https://xjtu-ygq.github.io/posts/deepctr%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6/</link>
+      <pubDate>Wed, 01 Mar 2023 14:38:33 +0800</pubDate>
+      
+      <guid>https://xjtu-ygq.github.io/posts/deepctr%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6/</guid>
+      <description>参考：torch-rechub 源码： Wide&amp;amp;Deep、DeepFM、DCN 数据集：Criteo 注意： 用于实际项目时，主要修改data.py文件，进行数据处理 数据处理中使用了LabelEnco</description>
+    </item>
+    
     <item>
       <title>LR公式推导</title>
       <link>https://xjtu-ygq.github.io/posts/lr%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/</link>
