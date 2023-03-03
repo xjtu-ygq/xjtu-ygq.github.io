@@ -13,7 +13,7 @@
       <pubDate>Wed, 01 Mar 2023 14:38:33 +0800</pubDate>
       
       <guid>https://xjtu-ygq.github.io/posts/deepctr%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6/</guid>
-      <description>参考：torch-rechub 源码： Wide&amp;amp;Deep、DeepFM、DCN 数据集：Criteo 注意： 用于实际项目时，主要修改data.py文件，进行数据处理 数据处理中使用了LabelEnco</description>
+      <description>参考：torch-rechub 源码：DeepCTR Wide&amp;amp;Deep、DeepFM、DCN 数据集：Criteo 注意： 用于实际项目时，主要修改data.py文件，进行数据处理 数据处理中使用了La</description>
     </item>
     
   </channel>
