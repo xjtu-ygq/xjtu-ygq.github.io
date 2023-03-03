@@ -155,6 +155,73 @@
 </ol>
 <h2 id="mmoeple">MMOE、PLE</h2>
 <h2 id="youtubednndssm">YoutubeDNN、DSSM</h2>
+<h3 id="训练方式">训练方式</h3>
+<ol>
+<li>
+<p>Point wise</p>
+<ul>
+<li>核心思想：二分类任务</li>
+<li>输入：&lt;User, Item&gt;</li>
+<li>输出：P(User, Item)</li>
+<li>目标：正样本接近1，负样本接近0</li>
+<li>Loss：BCELoss（二值交叉熵损失函数，往往搭配Sigmoid）</li>
+</ul>
+</li>
+<li>
+<p>Pair wise</p>
+<ul>
+<li>核心思想：正样本概率大于负样本</li>
+<li>输入：&lt;User, ItemP, ItemN&gt;</li>
+<li>输出：P&lt;User, ItemP&gt;，P&lt;User, ItemN&gt;</li>
+<li>目标：正样本概率大于负样本概率</li>
+<li>Loss：BPRLoss（贝叶斯个性化排序损失函数）
+<ul>
+<li>参考：$Loss=\frac{1}{N}\sum_{i=1}^N-log(sigmoid(P-N))$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>List wise</p>
+<ul>
+<li>核心思想：正样本&gt;负样本</li>
+<li>输入：&lt;User, ItemP, ItemN_1, &hellip;, ItemN_n&gt;</li>
+<li>输出：P(User, ItemP, ItemN_1, &hellip;, ItemN_n)</li>
+<li>目标：正样本概率大于负样本概率之和</li>
+<li>Loss：torch.nn.CrossEntropyLoss</li>
+</ul>
+</li>
+</ol>
+<h3 id="衡量指标">﻿衡量指标</h3>
+<ol>
+<li>
+<p>cosine：余弦相似度
+$$
+cos(a,b)=\frac{&lt;a,b&gt;}{|a|*|b|}
+$$</p>
+</li>
+<li>
+<p>dot：点积
+$$
+dot(a,b)=&lt;a,b&gt;
+$$</p>
+</li>
+<li>
+<p>Euclidian Distance：欧氏距离
+$$
+Euclidian Distance(a,b)=\sum_{i=1}^{N}(a_i-b_i)^2=\sum_{i=1}^{N}(a_i)^2+\sum_{i=1}^{N}(b_i)^2-2*\sum_{i=1}^{N}(a_i*b_i)
+$$</p>
+<p>$$
+Euclidian Distance(a,b)=a^2+b^2-2*\sum_{i=1}^{N}(a_i<em>b_i)=2-2</em>\sum_{i=1}^{N}(a_i*b_i)
+$$</p>
+<p>$$
+Euclidian Distance(a,b)=2(1-cos(a,b))
+$$</p>
+<ul>
+<li>注意：L2 Norm之后的欧氏距离等价于余弦相似度</li>
+</ul>
+</li>
+</ol>
 </div>
                     <div class="post_footer">
                         
