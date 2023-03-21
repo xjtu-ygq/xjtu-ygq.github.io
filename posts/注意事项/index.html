@@ -9,21 +9,19 @@
 	
 	
 	
-	<title>Transformer ｜ Yin Guangqi</title>
+	<title>注意事项 ｜ Yin Guangqi</title>
 	
     
     
-    <meta name="description" content="Hugo theme zozo example site." />
+    <meta name="description" content="Transformer Transformer的多头注意力机制为什么每个头计算结果不同？ 输入相同，但学习的投影矩阵（linear）不同，原因在于投影矩阵的初始值是随机初始化的，所以学习结果不用 为什么Q和K使用不同的权重矩阵" />
     
 
     
     
-    <meta name="keywords" content="Hugo, theme, zozo" />
+    <meta name="keywords" content="Transformer" />
     
 
 	
-	<link rel="alternate" type="application/rss+xml" href="https://xjtu-ygq.github.io/tags/transformer/index.xml" title="Yin Guangqi" />
-    
     
     <link rel="shortcut icon" href="https://xjtu-ygq.github.io/images/favicon.ico" />
 
@@ -105,44 +103,103 @@
     </div>
 </div>
         <div class="content">
-            <div class="list_with_title">
-                
-                <div class="listing_title">2023</div>
-                <div class="listing">
-                    
-                    <div class="listing_item">
-                        <div class="listing_post">
-                            <a href="/posts/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">注意事项</a>
-                            <div class="post_time"><span class="date">03-21</span></div>
-                        </div>
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/posts/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/'>注意事项</a></h2>
+                        <span class="date">2023.03.21</span>
                     </div>
-                    
+                    <div class="post_content markdown"><h2 id="transformer">Transformer</h2>
+<ol>
+<li>Transformer的多头注意力机制为什么每个头计算结果不同？
+<ul>
+<li>输入相同，但学习的投影矩阵（linear）不同，原因在于投影矩阵的初始值是<strong>随机初始化</strong>的，所以学习结果不用</li>
+</ul>
+</li>
+<li>为什么Q和K使用不同的权重矩阵生成？（权重矩阵是指全连接处）
+<ul>
+<li>Q、K点乘需要维度一致（nxm和mxd），所以<strong>序列的长度</strong>不同导权重矩阵不同</li>
+<li>注意力机制中，Q、K经过<strong>全连接层</strong> ，不同的权重矩阵有利于捕捉到更加充分的潜在信息</li>
+</ul>
+</li>
+<li>注意力机制为何采用点乘而不是加法？
+<ul>
+<li>点乘代表向量相似度，加法只是简单想法，不具有可解释性</li>
+<li>二者复杂度相同，效果相似，具体以实践为主</li>
+</ul>
+</li>
+<li>attention之后需要进行<strong>softmax</strong>，解释为何要scaled？
+<ul>
+<li>scaled即除以根号d，防止softma饱和问题（<strong>受到单一值影响过大</strong>）</li>
+<li>提高模型的训练和预测性能（速度）</li>
+</ul>
+</li>
+<li>Transformer的掩码机制：
+<ul>
+<li>掩码只在<strong>解码器decoder</strong>中</li>
+<li>在输入的时候设置mask标记哪些是padding或是当前时刻之后的数据（比如0,1）</li>
+<li>主要体现在<strong>attention计算</strong>中，在<strong>softmax</strong>之前赋值负无穷，使得softmax之后变为0</li>
+</ul>
+</li>
+<li>为什么在进行多头注意力的时候需要对每个head进行降维？
+<ul>
+<li>这个降维体现在<strong>linear</strong>或投影矩阵</li>
+<li>降低计算复杂度（主要考虑序列长度问题）</li>
+<li>效果和速度之间抉择（<strong>注意是linear降维还是softmax之前的除以根号d</strong>）</li>
+</ul>
+</li>
+<li>Encoder介绍：
+<ul>
+<li>两层：多头注意力机制+前馈神经网络</li>
+<li>嵌入层、位置编码、注意力机制（残差、归一化)、前馈神经网络（残差、归一化）</li>
+</ul>
+</li>
+<li>Transformer哪些地方使用了激活函数
+<ul>
+<li>前馈神经网络（全连接+Relu）</li>
+<li>多头注意力机制（attention之后的softmax）</li>
+</ul>
+</li>
+<li>为什么transformer块使用LayerNorm而不是BatchNorm？LayerNorm 在Transformer的位置是哪里？</li>
+<li>前馈神经网络：
+<ul>
+<li>两层全连接（<strong>linear+Relu+linear</strong>）</li>
+<li>Relu激活函数计算速度快，增加非线性表达能力</li>
+<li>FFN不能处理元素之间的关系（因为只有linear）</li>
+</ul>
+</li>
+<li>Dropout：
+<ul>
+<li>随机断开神经元之间的连接</li>
+<li>防止过拟合</li>
+</ul>
+</li>
+</ol>
+<h2 id="优化器">优化器</h2>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/transformer/">Transformer</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
                 
-                <div class="listing_title">2022</div>
-                <div class="listing">
-                    
-                    <div class="listing_item">
-                        <div class="listing_post">
-                            <a href="/posts/transformer%E7%9A%84pytorch%E5%AE%9E%E7%8E%B0/">Transformer的Pytorch实现</a>
-                            <div class="post_time"><span class="date">12-02</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="listing_item">
-                        <div class="listing_post">
-                            <a href="/posts/transformer/">Attention Is All You Need</a>
-                            <div class="post_time"><span class="date">12-01</span></div>
-                        </div>
-                    </div>
-                    
-                </div>
+                
+                <div class="doc_comments"></div>
                 
             </div>
-            <div class="pagination"></div>
         </div>
-        <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
     <footer class="footer">
     <div class="powered_by">
         <a href="http://github.com/xjtu-ygq">© xjtu-ygq | </a>
