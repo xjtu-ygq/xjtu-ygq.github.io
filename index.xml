@@ -8,11 +8,11 @@
     <language>en</language>
     <lastBuildDate>Tue, 21 Mar 2023 17:44:00 +0800</lastBuildDate><atom:link href="https://xjtu-ygq.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>优化器&#43;损失函数</title>
-      <link>https://xjtu-ygq.github.io/posts/%E4%BC%98%E5%8C%96%E5%99%A8&#43;%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/</link>
+      <title>优化器</title>
+      <link>https://xjtu-ygq.github.io/posts/%E4%BC%98%E5%8C%96%E5%99%A8/</link>
       <pubDate>Tue, 21 Mar 2023 17:44:00 +0800</pubDate>
       
-      <guid>https://xjtu-ygq.github.io/posts/%E4%BC%98%E5%8C%96%E5%99%A8&#43;%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/</guid>
+      <guid>https://xjtu-ygq.github.io/posts/%E4%BC%98%E5%8C%96%E5%99%A8/</guid>
       <description>优化器 ​ 优化器就是在深度学习反向传播过程中，指引损失函数（目标函数）的各个参数往正确的方向更新合适的大小，使得更新后的各个参数让损失函数（目标函数）值不断逼近全局最小 SGD（随机梯度下降） $$ w_{t+1}=w_t-\alpha\cdot g_t $$ 每次</description>
     </item>
     
