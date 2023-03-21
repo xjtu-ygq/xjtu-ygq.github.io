@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-	<meta name="generator" content="Hugo 0.105.0">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,21 +9,19 @@
 	
 	
 	
-	<title>Yin Guangqi ｜ 一日之计在于晨 </title>
+	<title>优化器&#43;损失函数 ｜ Yin Guangqi</title>
 	
     
     
-    <meta name="description" content="Hugo theme zozo example site." />
+    <meta name="description" content="优化器 ​ 优化器就是在深度学习反向传播过程中，指引损失函数（目标函数）的各个参数往正确的方向更新合适的大小，使得更新后的各个参数让损失函数（目标函数）值不断逼近全局最小 SGD（随机梯度下降） $$ w_{t&#43;1}=w_t-\alpha\cdot g_t $$ 每次" />
     
 
     
     
-    <meta name="keywords" content="Hugo, theme, zozo" />
+    <meta name="keywords" content="优化器, 损失函数" />
     
 
 	
-	<link rel="alternate" type="application/rss+xml" href="https://xjtu-ygq.github.io/index.xml" title="Yin Guangqi" />
-    
     
     <link rel="shortcut icon" href="https://xjtu-ygq.github.io/images/favicon.ico" />
 
@@ -106,56 +103,95 @@
     </div>
 </div>
         <div class="content">
-            
-
-<div class="post animated fadeInDown">
-    <div class="post_title">
-        <h2><a href='/posts/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/'>《深度学习推荐系统》笔记</a></h2>
-    </div>
-    
-    <div class="list">
-        <div class="post_content markdown">
-            <p>深度学习推荐系统 传统推荐模型 协同过滤CF 协同过滤的核心是向量的相似度Similarity 余弦相似度 皮尔逊相关系数 用户平均分 物品平均分 UserCF 用户的评分向量（横向量）的相似度，计算相似用户TopN，目标评分=......</p>
-        </div>
-    </div>
-    
-    <div class="post_footer">
-        <div class="meta">
-            <div class="info">
-                <span class="field">
-                    <i class="ri-map-pin-time-line"></i>
-                    <span class="date">2022.11.28</span>
-                </span>
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/posts/%E4%BC%98%E5%8C%96%E5%99%A8&#43;%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/'>优化器&#43;损失函数</a></h2>
+                        <span class="date">2023.03.21</span>
+                    </div>
+                    <div class="post_content markdown"><h2 id="优化器">优化器</h2>
+<p>​		优化器就是在深度学习反向传播过程中，指引损失函数（目标函数）的各个参数往正确的方向更新合适的大小，使得更新后的各个参数让损失函数（目标函数）值不断逼近全局最小</p>
+<p><img src="https://gitee.com/qq-backpack/Upload/raw/master/Images/1476416-20190630165437355-419988264.png" alt="局部最优怎么办？ - keepgoing18 - 博客园"></p>
+<ol>
+<li>
+<p>SGD（随机梯度下降）
+$$
+w_{t+1}=w_t-\alpha\cdot g_t
+$$</p>
+<ul>
+<li>每次只用一个样本更新参数，训练速度快</li>
+<li>当遇到局部最优点梯度为0，参数无法更新</li>
+<li>陡峭方向震荡，难以迅速收敛</li>
+</ul>
+</li>
+<li>
+<p>SGD-M
+$$
+w_{t+1}=w_t-\alpha\cdot (\beta_1\cdot m_{t-1}+(1-\beta_1)\cdot g_t)
+$$</p>
+<ul>
+<li>一阶动量是各个时刻梯度方向的指数移动平均值</li>
+<li>解决SGD局部最优点是0和震荡问题</li>
+<li>但并未完全解决（震荡）</li>
+</ul>
+</li>
+<li>
+<p>NAG</p>
+<ul>
+<li>先按照累积动量走一步，在决策如何走</li>
+</ul>
+</li>
+<li>
+<p>AdaGrad（自适应学习率）</p>
+<p>经常更新的参数，学习率调小；不经常更新的学习率调大</p>
+<ul>
+<li>二阶动量：记录到目前为止所有梯度值的平方和</li>
+<li>在<strong>稀疏数据</strong>场景下表现非常好</li>
+<li>学习率可能会递减至0导致早停</li>
+</ul>
+</li>
+<li>
+<p>AdaDelta</p>
+<ul>
+<li>避免了二阶动量持续累积</li>
+</ul>
+</li>
+<li>
+<p>Adam</p>
+<ul>
+<li>集大成者：一阶动量+二阶动量</li>
+<li>有效控制学习率步长和梯度方向，防止梯度的振荡和在鞍点的静止</li>
+<li>可能不收敛</li>
+<li>可能错过全局最优解：后期数据难以纠正前期拟合效果</li>
+</ul>
+</li>
+</ol>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/%E4%BC%98%E5%8C%96%E5%99%A8/">优化器</a>
+                                    
+                                    <a href="https://xjtu-ygq.github.io/tags/%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/">损失函数</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
                 
-                <span class="field tags">
-                    <i class="ri-stack-line"></i>
-                    
-                    <a href="https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">推荐系统</a>
-                    
-                    <a href="https://xjtu-ygq.github.io/tags/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95/">推荐算法</a>
-                    
-                    <a href="https://xjtu-ygq.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
-                    
-                </span>
+                
+                <div class="doc_comments"></div>
                 
             </div>
         </div>
     </div>
-</div>
-
-
-<div class="pagination">
-    
-    
-    <a href="/page/3/" class="pre">
-        Prev
-    </a>
-    
-    
-    
-</div>
-        </div>
-    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
     <footer class="footer">
     <div class="powered_by">
         <a href="http://github.com/xjtu-ygq">© xjtu-ygq | </a>
