@@ -110,41 +110,6 @@
 
 <div class="post animated fadeInDown">
     <div class="post_title">
-        <h2><a href='/posts/lr%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/'>LR公式推导</a></h2>
-    </div>
-    
-    <div class="list">
-        <div class="post_content markdown">
-            <p>线性回归公式： $$ y=w^Tx+b $$ 简化线性回归公式： $$ y=w^Tx $$ sigmoid公式： $$ \sigma(x)=\frac{1}{1+e^{-x}} $$ LR公式： $$ \pi(x)=\frac{1}{1+e^{-w^Tx}} $$ 二分类： $$ P(y=1|x)=\frac{1}{1+e^{-w^Tx}} $$ $$ \begin{equation} \begin{aligned} P(y=0|x)&amp;=1-P(y=1|x)\ &amp;=\frac{e^{-w^Tx}}{1+e^{-w^Tx}} \end{aligned} \end{equation} $$ 对数似然函数： $$ \begin{equation} \begin{aligned} L(x)&amp;= \prod\limits^N_{i=1}logP(y_i|x_i)\ &amp;=\sum\limits^N_{i=1}(y_ilog(p_1)+(1-y_ilog(p_0)))\ &amp;=\sum\limits^N_{i=1}(y_ilog(p_1)+(1-y_ilog(1-p_1)))\ &amp;=\sum\limits^N_{i=1}(y_i(log(p_1)-log(1-p_1))+log(1-p_1))\ &amp;=\sum\limits^N_{i=1}(y_ilog\frac{p_1}{1-p_1}+log(1-p_1))\ &amp;=\sum\limits^N_{i=1}(y_iw^Tx_i-log(1+e^{w^Tx})) \end{aligned} \end{equation} $$ 求偏导： $$ \begin{equation} \begin{aligned} \frac{\partial L(x)}{\partial w}&amp;=\sum\limits^N_{i=1}(y_ix_i-\frac{x_ie^{w^Tx_i}}{1+e^{w^Tx_i}})\ &amp;=\sum\limits^N_{i=1}(y_i-\frac{e^{w^Tx_i}}{1+e^{w^Tx_i}})x_i\ &amp;=\sum\limits^N_{i=1}(y_i-\frac{1}{1+e^{-w^Tx_i}})x_i\ &amp;=\sum\limits^N_{i=1}(y_i-\pi(w^Tx))x_i\ \end{aligned} \end{equation} $$ 梯度上升： $$......</p>
-        </div>
-    </div>
-    
-    <div class="post_footer">
-        <div class="meta">
-            <div class="info">
-                <span class="field">
-                    <i class="ri-map-pin-time-line"></i>
-                    <span class="date">2023.02.02</span>
-                </span>
-                
-                <span class="field tags">
-                    <i class="ri-stack-line"></i>
-                    
-                    <a href="https://xjtu-ygq.github.io/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">逻辑回归</a>
-                    
-                    <a href="https://xjtu-ygq.github.io/tags/lr/">LR</a>
-                    
-                    <a href="https://xjtu-ygq.github.io/tags/%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/">公式推导</a>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="post animated fadeInDown">
-    <div class="post_title">
         <h2><a href='/posts/%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95/'>模拟面试</a></h2>
     </div>
     
@@ -244,6 +209,45 @@
                     <a href="https://xjtu-ygq.github.io/tags/pytorch/">Pytorch</a>
                     
                     <a href="https://xjtu-ygq.github.io/tags/attention/">Attention</a>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="post animated fadeInDown">
+    <div class="post_title">
+        <h2><a href='/posts/transformer/'>Attention Is All You Need</a></h2>
+    </div>
+    
+    <div class="list">
+        <div class="post_content markdown">
+            <p>Encoder+Decoder Outputs是自己的输出，只在训练时加入，应用时不加入 $sub-layer=LayerNorm(x+SubLayer(x))$ Encoder的输出作为Decoder多头注意力机制的Q、K 激活函数采用Relu Attention 多头注意力机制是将Q、K、V进行全连接之后再进行h层的注意......</p>
+        </div>
+    </div>
+    
+    <div class="post_footer">
+        <div class="meta">
+            <div class="info">
+                <span class="field">
+                    <i class="ri-map-pin-time-line"></i>
+                    <span class="date">2022.12.01</span>
+                </span>
+                
+                <span class="field tags">
+                    <i class="ri-stack-line"></i>
+                    
+                    <a href="https://xjtu-ygq.github.io/tags/transformer/">Transformer</a>
+                    
+                    <a href="https://xjtu-ygq.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">神经网络</a>
+                    
+                    <a href="https://xjtu-ygq.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+                    
+                    <a href="https://xjtu-ygq.github.io/tags/attention/">Attention</a>
+                    
+                    <a href="https://xjtu-ygq.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a>
                     
                 </span>
                 
