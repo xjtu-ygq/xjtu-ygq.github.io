@@ -62,15 +62,6 @@
     </item>
     
     <item>
-      <title>模拟面试</title>
-      <link>https://xjtu-ygq.github.io/posts/%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95/</link>
-      <pubDate>Wed, 28 Dec 2022 20:02:12 +0800</pubDate>
-      
-      <guid>https://xjtu-ygq.github.io/posts/%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95/</guid>
-      <description>快手 两数相除 class Solution { public int divide(int dividend, int divisor) { int res=0; if(dividend==Integer.MIN_VALUE&amp;amp;&amp;amp;divisor==-1) return Integer.MAX_VALUE; int sign=(dividend&amp;gt;0)^(divisor&amp;gt;0)?-1:1; dividend=Math.abs(dividend); divisor=Math.abs(divisor); for(int i=31;i&amp;gt;=0;i--){ if((dividend&amp;gt;&amp;gt;&amp;gt;i)-divisor&amp;gt;=0){ dividend-=(divisor&amp;lt;&amp;lt;i); res+=(1&amp;lt;&amp;lt;i); } } return sign==1?res:-res; } } 复原 IP 地址 class Solution { public int divide(int dividend, int divisor) { int res=0; if(dividend==Integer.MIN_VALUE&amp;amp;&amp;amp;divisor==-1) return Integer.MAX_VALUE; int sign=(dividend&amp;gt;0)^(divisor&amp;gt;0)?-1:1; dividend=Math.abs(dividend); divisor=Math.abs(divisor); for(int i=31;i&amp;gt;=0;i--){ if((dividend&amp;gt;&amp;gt;&amp;gt;i)-divisor&amp;gt;=0){ dividend-=(divisor&amp;lt;&amp;lt;i); res+=(1&amp;lt;&amp;lt;i); } } return sign==1?res:-res; } } 24 点游戏 private static final double target=24; private static final double epsilon=1e-6; public boolean judgePoint24(int[] cards) { return helper(new double[]{cards[0],cards[1],cards[2],cards[3]}); } public boolean helper(double[] nums){ if(nums.length==1){ return</description>
-    </item>
-    
-    <item>
       <title>YouTubeDNN</title>
       <link>https://xjtu-ygq.github.io/posts/youtubednn/</link>
       <pubDate>Sat, 10 Dec 2022 20:47:21 +0800</pubDate>
