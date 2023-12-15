@@ -13,7 +13,7 @@
       <pubDate>Thu, 14 Dec 2023 15:54:06 +0800</pubDate>
       
       <guid>https://xjtu-ygq.github.io/posts/tsp%E6%97%85%E8%A1%8C%E5%95%86%E9%97%AE%E9%A2%98/</guid>
-      <description>遗传算法 参考： 六分钟时间，带你走近遗传算法 遗传算法（GA）求解旅行商问题（TSP）MATLAB代码讲解</description>
+      <description>遗传算法 核心思想：基因交叉、基因变异（交换、逆转、插入） 主要操作 二元锦标赛选择操作 比如100个种群，随机选取两个种群进行比较选取适应度最大（距离最小）的种群依次放入队列，共选取100个 OX交叉操作 两个</description>
     </item>
     
     <item>
